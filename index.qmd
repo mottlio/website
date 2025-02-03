@@ -8,5 +8,9 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 ```{r}
 library(usethis)
+use_git_config(user.name = "mottlio", user.email = "michal.mottl@coleurope.eu")
+git_sitrep()
+use_git()
+use_github()
 1 + 1
 ```
