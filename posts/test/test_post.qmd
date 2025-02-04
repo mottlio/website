@@ -1,5 +1,5 @@
 ---
-title: 'This is a dummy blog posts'
+title: 'Test Post'
 date: '2025-02-05'
 categories: ['123', 'Second Tag']
 description: 'This is a test post. In this post, I try out different functionalities'
