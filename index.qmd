@@ -7,9 +7,19 @@ execute:
 page-layout: full
 ---
 
-![](images/MM.jpg){.profile-pic style="clip-path: circle();" fig-alt="Michal photo" fig-align="center" width="20%"}
+::: grid
+::: g-col-12
+:::
 
-Hi! 👋 I'm an economist and data scientist passionate about exploring complex topics in simple ways using data. I've lived and [worked](https://www.linkedin.com/in/mottl/){target="_blank"} in the United Kingdom, European Union and New Zealand 🌏. My main areas of interest are:
+::: {.g-col-12 .g-col-md-4}
+
+![](images/MM.jpg){.profile-pic style="clip-path: circle();" fig-alt="Michal photo" fig-align="center" width="80%"}
+
+:::
+
+::: {.g-col-12 .g-col-md-8}
+
+Hi! 👋 I'm an economist and data scientist passionate about making the complex simple using data. I've lived and [worked](https://www.linkedin.com/in/mottl/){target="_blank"} in the United Kingdom, European Union and New Zealand 🌏. My main areas of interest are:
 
 -   Data Analysis 🔎🔬
 
@@ -19,8 +29,6 @@ Hi! 👋 I'm an economist and data scientist passionate about exploring complex 
 
 -   Machine Learning and AI 🤖
 
-::: grid
-::: g-col-12
 :::
 
 ::: {.g-col-12 .g-col-md-4}
@@ -56,6 +64,22 @@ About me, my work and experience.
 :::
 
 ::: {.g-col-12 .g-col-md-4}
+::: {.card .h-100}
+::: {.card-body .d-flex .flex-column}
+<p class="card-text">
+
+Data Viz.
+
+</p>
+
+::: {style="margin-top: auto;"}
+<a href="packages.qmd" class="card-link second-color-link heading-font">PROJECTS</a>
+:::
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
 ::: {#card-third-color .card .h-100}
 ::: {.card-body .d-flex .flex-column}
 <p class="card-text">
@@ -71,21 +95,7 @@ GET in touch!
 :::
 :::
 
-::: {.g-col-12 .g-col-md-4}
-::: {.card .h-100}
-::: {.card-body .d-flex .flex-column}
-<p class="card-text">
 
-Data Viz.
-
-</p>
-
-::: {style="margin-top: auto;"}
-<a href="packages.qmd" class="card-link second-color-link heading-font">PROJECTS</a>
-:::
-:::
-:::
-:::
 
 
 :::
