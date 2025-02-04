@@ -1,11 +1,91 @@
 ---
-title: "website"
+knitr:
+  opts_chunk: 
+    collapse: true
+execute: 
+  echo: false
+page-layout: full
 ---
 
-Hello! This is a Quarto website.
+![](images/MM.jpg){.profile-pic style="clip-path: circle();" fig-alt="Michal photo" fig-align="center" width="20%"}
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Hi! 👋 I'm an economist and data scientist passionate about exploring complex topics in simple ways using data. I've lived and [worked](https://www.linkedin.com/in/mottl/){target="_blank"} in the United Kingdom, European Union and New Zealand 🌏. My main areas of interest are:
 
-```{r}
-1 + 1
-```
+-   Data Analysis 🔎🔬
+
+-   Data Visualization 📈 📊
+
+-   Data Engineering 🛠️
+
+-   Machine Learning and AI 🤖
+
+::: grid
+::: g-col-12
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {#card-second-color .card .h-100}
+::: {.card-body .d-flex .flex-column}
+<p class="card-text">
+
+Posts about data-related topics (mostly).
+
+</p>
+
+::: {style="margin-top: auto;"}
+<a href="posts.qmd" class="card-link second-color-link heading-font">BLOG</a>
+:::
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {#card-first-color .card .h-100}
+::: {.card-body .d-flex .flex-column}
+<p class="card-text">
+
+About me, my work and experience.
+
+</p>
+
+::: {style="margin-top: auto;"}
+<a href="about.qmd" class="card-link heading-font">ABOUT</a>
+:::
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {#card-third-color .card .h-100}
+::: {.card-body .d-flex .flex-column}
+<p class="card-text">
+
+GET in touch!
+
+</p>
+
+::: {style="margin-top: auto;"}
+<a href="talks.qmd" class="card-link third-color-link heading-font">CONTACT</a>
+:::
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card .h-100}
+::: {.card-body .d-flex .flex-column}
+<p class="card-text">
+
+Data Viz.
+
+</p>
+
+::: {style="margin-top: auto;"}
+<a href="packages.qmd" class="card-link second-color-link heading-font">PROJECTS</a>
+:::
+:::
+:::
+:::
+
+
+:::
