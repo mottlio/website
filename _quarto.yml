@@ -7,7 +7,7 @@ execute:
 website:
   title: "Michal Mottl"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
       - about.qmd
