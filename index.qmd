@@ -5,5 +5,6 @@ title: "website"
 Hello! This is my website.
 
 ```{r}
+2+2
 1 + 1
 ```
