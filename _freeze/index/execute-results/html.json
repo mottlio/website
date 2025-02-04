@@ -1,9 +1,11 @@
 {
-  "hash": "1b0ecf28266751e14590136111eaee20",
+  "hash": "54f8e39e97fa7473abc16c2ecb4d65bb",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"website\"\n---\n\n\nThis is a Quarto website.\n\nTo learn more about Quarto websites visit <https://quarto.org/docs/websites>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"website\"\n---\n\n\nHello! This is a Quarto website.\n\nTo learn more about Quarto websites visit <https://quarto.org/docs/websites>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
