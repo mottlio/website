@@ -32,7 +32,61 @@ We’ll use [Google Forms](https://workspace.google.com/intl/en_nz/products/form
 
 # Process
 
-1.  Make a Google Form
+1.  Create your survey in Google Forms
+
+![](images/google_forms.png){fig-align="right" width="80%"}
+
+2.  When the survey is published, navigate to the 'Responses' tab and click on the spreadsheet icon.
+
+![](images/google_forms_spreadsheet.png){fig-align="right" width="80%"}
+
+3.  Open the spreadsheet and click on the 'Extensions' tab and then on 'Apps Script'.
+
+![](images/google_forms_apps_script.png){fig-align="right" width="80%"}
+
+4.  Create a new function using this JavaScript code:
+
+``` javascript
+#| eval: false
+#| echo: false
+
+
+function myFunction() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheets()[0];
+  var range = sheet.getRange("A2:E");
+  range.sort({column: 1, ascending: false});
+
+
+  var url = "";
+  var headers = {
+             "contentType": "application/json",
+             "headers":{"X-PW-AccessToken": "<TOKEN>",
+                        "X-PW-Application": "developer_api",
+                        "X-PW-UserEmail": "<USER_EMAIL_ADDRESS>"}
+             };
+  console.log("start");
+  UrlFetchApp.fetch(url, headers);
+  console.log("end");
+}
+```
+
+5.  In Google Cloud, create a new Project
+
+![](images/create_new_project.png){fig-align="right" width="80%"}
+
+
+6. Navigate to the API [credentials section](https://console.cloud.google.com/apis/credentials) of the Google Cloud Console.
+
+![](images/iam_service_account.png){fig-align="right" width="80%"}
+
+7. After creating a service account linkedd to your new project, go to the page of that service account and in the 'Keys' tab select 'Add Key'. Select the JSON type.
+
+![](images/create_new_json_key.png){fig-align="right" width="80%"}
+
+This creates the key and downloads a local key file in JSON format. While we’re here enable the google sheets api that will allow us to use our new key.
+
+![](images/enable_google_sheets_api.png){fig-align="right" width="80%"}
 
 Understanding the Data Pipeline
 
