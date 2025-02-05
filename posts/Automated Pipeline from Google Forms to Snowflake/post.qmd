@@ -1,0 +1,82 @@
+---
+title: 'Automated Pipeline from Google Forms to Snowflake'
+date: '2025-02-05'
+categories: ['Google Forms', 'Snowflake']
+description: 'Building an automated pipeline from Google Forms to Snowflake streamlines the process of collecting, storing, and analyzing survey data, making it easier to leverage Snowflake LLM capabilities and extract actionable insights from text.'
+execute: 
+  message: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+# Introduction
+
+A while ago I worked on a project involving the analysis of large amounts of text data obtained from surveys using Google Forms.
+I was looking for ways to extract meaningful insights from many thousands of text submissions.
+I chose to work in Snowflake given the ability to use Python packages for natural language processing, Large Language Models for summaries and Streamlit for visualization.
+
+At the time, I loaded all of the data manually.
+However, I was curious what it would take to automate the data loading and create a live dashboard of the survey results.
+
+# Objective
+
+Our objective is to automatically load survey text data from Google Forms into Snowflake to later analyze it using its LLM capabilities.
+
+# Components
+
+We’ll use [Google Forms](https://workspace.google.com/intl/en_nz/products/forms/), [Apps Script](https://developers.google.com/apps-script), [Google Cloud Run](https://cloud.google.com/run), and [Snowflake Node Connector](https://docs.snowflake.com/en/developer-guide/node-js/nodejs-driver).
+
+# Process
+
+1.  Make a Google Form
+
+Understanding the Data Pipeline
+
+Data Source: Overview of Google Forms and how data is captured.
+Data Pipeline Architecture: Diagram of data flow from Google Forms to Snowflake.
+Explanation of each component in the pipeline.
+Step 1: Setting Up Your Google Forms
+
+Designing the survey for quality data capture.
+Configuring Google Forms to automatically store responses in Google Sheets.
+Tips for exporting data.
+Step 2: Automating Data Extraction
+
+Overview of integration options (Google Apps Script, Zapier, etc.).
+Sample code snippet using Google Apps Script to extract data.
+Scheduling automated exports.
+Step 3: Loading Data into Snowflake
+
+Overview of Snowflake’s data ingestion options (Snowpipe, bulk load, etc.).
+Walkthrough of setting up a Snowflake stage and creating a table.
+Sample scripts/SQL for data loading.
+Tips for error handling and performance tuning.
+Step 4: Leveraging Snowflake’s LLM Capabilities
+
+Introduction to Snowflake’s LLM offerings.
+Use cases: How LLMs can transform text analysis (e.g., sentiment analysis, trend detection).
+Example queries or procedures that integrate LLM functions.
+Security considerations and best practices.
+Step 5: Full Pipeline Demonstration
+
+A real-world example of the entire workflow.
+Walkthrough of the pipeline from form submission to text analysis.
+Screenshots, code snippets, and explanations.
+Advanced Topics & Best Practices
+
+Performance optimization for large-scale text analysis.
+Strategies for monitoring and error handling.
+Future enhancements (adding more data sources, refining the analysis with advanced NLP).
+Conclusion
+
+Recap of the key steps and benefits.
+Final thoughts on automating data pipelines for survey analysis.
+Invitation for feedback and further discussion.
+Resources & References
+
+Documentation links for Google Forms, Snowflake, and integration tools.
+Links to code repositories and further reading materials.
