@@ -36,7 +36,7 @@ Hi! 👋 I'm an economist and data scientist passionate about using data analysi
 ::: {.card-body .d-flex .flex-column}
 <p class="card-text">
 
-Posts about data-related topics (mostly).
+Posts about data-related topics (mostly). Notes about problems I encountered in my projects and ways I've solved them.
 
 </p>
 
