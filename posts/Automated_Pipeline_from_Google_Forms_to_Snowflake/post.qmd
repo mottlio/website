@@ -13,7 +13,7 @@ editor:
     wrap: sentence
 ---
 
-# Introduction
+# Objective
 
 A while ago I worked on a project involving the analysis of large amounts of text data obtained from surveys using Google Forms.
 I was looking for ways to extract meaningful insights from many thousands of text submissions.
@@ -22,11 +22,9 @@ I chose to work in Snowflake given the ability to use Python packages for natura
 At the time, I loaded all of the data manually.
 However, I was curious what it would take to automate the data loading and create a live dashboard of the survey results.
 
-# Objective
+The objective of this project was to automatically load survey text data from Google Forms into Snowflake to later analyze it using its LLM capabilities.
 
-Our objective is to automatically load survey text data from Google Forms into Snowflake to later analyze it using its LLM capabilities.
-
-# Components
+# Requirements
 
 We’ll use [Google Forms](https://workspace.google.com/intl/en_nz/products/forms/), [Apps Script](https://developers.google.com/apps-script), [Google Cloud Run](https://cloud.google.com/run), and [Snowflake Node Connector](https://docs.snowflake.com/en/developer-guide/node-js/nodejs-driver).
 
@@ -75,18 +73,137 @@ function myFunction() {
 
 ![](images/create_new_project.png){fig-align="right" width="80%"}
 
-
-6. Navigate to the API [credentials section](https://console.cloud.google.com/apis/credentials) of the Google Cloud Console.
+6.  Navigate to the API [credentials section](https://console.cloud.google.com/apis/credentials) of the Google Cloud Console.
 
 ![](images/iam_service_account.png){fig-align="right" width="80%"}
 
-7. After creating a service account linkedd to your new project, go to the page of that service account and in the 'Keys' tab select 'Add Key'. Select the JSON type.
+7.  After creating a service account linkedd to your new project, go to the page of that service account and in the 'Keys' tab select 'Add Key'. Select the JSON type.
 
 ![](images/create_new_json_key.png){fig-align="right" width="80%"}
 
-This creates the key and downloads a local key file in JSON format. While we’re here enable the google sheets api that will allow us to use our new key.
+This creates the key and downloads a local key file in JSON format.
+While we’re here enable the google sheets api that will allow us to use our new key.
 
 ![](images/enable_google_sheets_api.png){fig-align="right" width="80%"}
+
+8.  In Snowflake, create a new table to store new records from Google Sheets. I've called it 'responses_sheet'. This table will be referenced in the insert statement later on.
+
+![](images/snowflake_table_google_sheets.png){fig-align="right" width="80%"}
+
+9.  Set up the Google Cloud Run service to fetch latest data from Google Sheets and deliver it to Snowflake. A detailed guide to building and deploying a Node.js web app to Cloud Run is [here](https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-nodejs-service). We'll need to create 3 files that will be uploaded to the service.
+
+::: panel-tabset
+## index.js
+
+``` javascript
+
+const path = require('path');
+const {google} = require('googleapis');
+const sheets = google.sheets('v4');
+const snow = require('snowflake-sdk');
+const express = require('express');
+const app = express();
+
+const getInvite = async () => {
+    const auth = new google.auth.GoogleAuth({
+    keyFile: path.join(__dirname, 'creds.json'),
+    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+  });
+  google.options({auth});
+  const res = await sheets.spreadsheets.values.get({
+    spreadsheetId: <sheets id>,
+    range: 'A2:E2',
+  });
+  const row = res.data.values;
+  if (!row || row.length === 0) {
+    console.log('No data found.');
+    return;
+  }else {
+    console.log(row)
+  }
+  const connection = snow.createConnection(
+    {
+      account: <locator>.<cloud provider>,
+      username: <username>,
+      password: <password>,
+      warehouse: 'COMPUTE_WH',
+      database: 'DEMO_DB',
+      schema: 'PUBLIC',
+      role: 'ACCOUNTADMIN'
+    }
+  );
+  const conn = connection.connect();
+  conn.execute({sqlText: 'INSERT INTO DEMO_DB.PUBLIC.SHEETS
+  (TIMESTAMP, USED_SNOWFLAKE, USED_GOOGLE_SHEETS, PYTHON_KNOWLEDGE, TOPIC_INTEREST) values(?, ?, ?, ?, ?)', binds: row});
+  }
+
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+  console.log('listening');
+});
+
+app.get('/', (req,res) => {
+    getInvite();
+    res.send('Adding Data');
+});
+```
+
+## Dockerfile
+
+``` default
+
+# Use official Node.js image.
+# https://hub.docker.com/_/node
+FROM node:16
+
+# Create and change to the app directory.
+WORKDIR /usr/src/app
+
+# Copy application dependency manifests to the container image.
+# A wildcard is used to ensure both package.json AND package-lock.json are copied.
+# Copying this separately prevents re-running npm install on every code change.
+COPY package*.json ./
+
+# Install production dependencies.
+RUN npm install 
+
+# Copy local code to the container image.
+COPY . .
+
+# Run the web service on container startup.
+EXPOSE 8080
+CMD [ "node", "index.js"
+```
+
+## package.json
+
+``` default
+
+{
+  "name": "node-sheets-to-snow",
+  "version": "2.0.0.",
+  "description": "google sheets to snow connector with oauth",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "googleapis": "^105.0.0",
+    "snowflake-sdk": "^1.6.14"
+  }
+}
+```
+:::
+
+One thing to note is that for security reasons, it's worth creating a dedicated service user in Snowflake and grant it a role with privileges limited to inserting records into our table in the PUBLIC schema.
+You can read more about how to do this [here](https://docs.snowflake.com/en/user-guide/tutorials/users-and-roles-tutorial).
+User login and password should never be hard coded in the index.js file.
+Instead, you can use Google's [Secrets Manager](https://cloud.google.com/run/docs/configuring/services/secrets) which integrates nicely with Google Cloud Run services.
+Login and password (or RSA key-value pairs) can be accessed from within the index.js file as environment variables.
 
 Understanding the Data Pipeline
 
