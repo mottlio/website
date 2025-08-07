@@ -1,6 +1,6 @@
 ---
-title: 'Test Post'
-date: '2025-02-05'
+title: 'DuckDB & MotherDuck as a Snowflake alternative for smaller data engineering projects'
+date: '2025-01-05'
 categories: ['123', 'Second Tag']
 description: 'This is a test post. In this post, I try out different functionalities'
 execute: 
@@ -10,163 +10,61 @@ editor_options:
   chunk_output_type: console
 ---
 
-# Heading 1
+# Why DuckDB Outshines Snowflake for Personal Projects
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus. 
+As someone who dabbles in **data engineering** and **analytics**, I’ve worked with everything from local databases to cloud data warehouses.  Recently I discovered **[DuckDB](https://duckdb.org)** and realised how nicely it slots into personal or small‑team projects compared with heavyweight warehouses like **Snowflake**.  This post explains why DuckDB (and its hosted companion **MotherDuck**) can be a more pragmatic choice for small or personal analytics workloads, and how it integrates well with tools like **dbt** and **Dagster**.
 
-## Merriweather
+## What is DuckDB?
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. **Aliquam feugiat dictum bibendum.** Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. [Fusce luctus](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss) porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.
+DuckDB is an **in‑process analytical database**.  Instead of running as a separate server, it lives *inside your application*—you load the library, point it at files, and query via SQL.  Because it runs locally and uses a vectorised, columnar execution engine, it’s blazing fast.  The Dagster team highlights that DuckDB is feature‑rich, fast and plays well with Python/Pandas, yet runs locally and doesn’t require a network connection:contentReference[oaicite:0]{index=0}.  The CortexFlow blog notes that DuckDB’s architecture merges compute and storage in one place; this contrasts with client–server warehouses like Snowflake that separate storage and compute:contentReference[oaicite:1]{index=1}.  To install DuckDB, you simply run `pip install duckdb`; there’s no server to configure or infrastructure to manage.
 
-### 3 - Code
+DuckDB is **free and open source**, licensed under MIT.  It supports SQL similar to PostgreSQL and can read data directly from CSV, Parquet, JSON and even remote S3/HTTP endpoints.  Because it’s embedded, you can use it within Python notebooks, R, Rust or Java applications without standing up a separate database.  The Atgeir Solutions blog describes it as turning your laptop into a personal analytics engine:contentReference[oaicite:2]{index=2}.
 
-This is `inline` code plus a small code chunk.
+### Strengths for Small Projects
 
-```{r}
-library(tidyverse)
+1. **Local and Lightweight** – DuckDB runs on your machine.  No cloud accounts, no warehouse provisioning, just load and query.  The Data Knows All blog explains that for a project serving ~12,000 users, using Snowflake would have been “pretty costly” for data that didn’t change often:contentReference[oaicite:3]{index=3}.  They looked for alternatives to avoid incurring those costs and found DuckDB’s local model ideal.
 
-ggplot(mpg) +
-  geom_jitter(aes(cty, hwy), size = 4, alpha = 0.5) 
-```
+2. **Fast Analytical Queries** – DuckDB uses columnar storage and vectorised execution.  Benchmarks often show it matching or beating distributed warehouses on single‑machine workloads.  Definite’s engineering team migrated from Snowflake to DuckDB and found that DuckDB is lightweight yet consistently near the top of performance benchmarks:contentReference[oaicite:4]{index=4}.
 
+3. **Low Cost** – DuckDB is free.  There are no licensing fees or pay‑per‑query charges, just your local compute resources.  The SyncComputing comparison notes that DuckDB is open‑source and free with no usage costs:contentReference[oaicite:5]{index=5}.  Definite’s migration reported a **>70 % cost reduction** after switching from Snowflake to DuckDB:contentReference[oaicite:6]{index=6}, even after accounting for VM costs.
 
-### 3 - Tabsets
+4. **No Vendor Lock‑in** – Because DuckDB uses standard SQL and reads/writes common formats, your data stays in portable files.  Definite emphasises that DuckDB accepts CSV, Parquet and even Excel/JSON files:contentReference[oaicite:7]{index=7}, so you can move elsewhere later without being tied to a vendor’s storage format.
 
-```{r, echo = F}
-knitr::opts_chunk$set(collapse = T)
-library(tidyverse)
-dat <- palmerpenguins::penguins %>% 
-  filter(!is.na(sex))
+5. **Simplicity** – Setup is trivial: `pip install duckdb` and start querying local files.  The CortexFlow post stresses that DuckDB’s architecture keeps compute and data co‑located, which reduces network latency and makes it ideal for quick insights:contentReference[oaicite:8]{index=8}.
 
-lm.mod <- dat %>%
-  mutate(
-    sex = if_else(sex == 'male', 1, 0),
-  ) %>% 
-  lm(data = ., sex ~ body_mass_g + bill_length_mm + species) 
+### Limitations
 
-preds_lm <- dat %>% 
-  mutate(
-    prob.fit = plogis(lm.mod$fitted.values),
-    prediction = if_else(prob.fit > 0.5, 'male', 'female'),
-    correct = if_else(sex == prediction, 'correct', 'incorrect')
-  )
-```
+DuckDB is designed for **single‑machine** workloads; it doesn’t support multi‑node distributed computing.  The Dagster article notes that DuckDB is essentially a “single‑player” database and is not intended for concurrent writes:contentReference[oaicite:9]{index=9}.  For large datasets or workloads requiring multi‑concurrency and fine‑grained security controls, Snowflake remains more appropriate.
 
+## DBT Integration
 
-::: panel-tabset
-### Transforming OLS estimates
+Many analysts rely on **dbt** (data build tool) for transforming data into modeled tables.  DuckDB integrates seamlessly with dbt through the `dbt‑duckdb` adapter.  The DuckDB blog describes how you can configure `profiles.yml` to run dbt models locally, either in‑memory or in a persisted `.duckdb` file:contentReference[oaicite:10]{index=10}.  The adapter even supports attaching remote Parquet files via S3/HTTP using the `external_location` property:contentReference[oaicite:11]{index=11}.  You still get dbt’s lineage graphs, tests and materialisations (tables, incremental models, snapshots and views):contentReference[oaicite:12]{index=12}.  This means you can develop and test dbt models entirely on your laptop before deploying them to a more scalable system.
 
-```{r}
-#| code-fold: true
-preds_lm %>% 
-  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +
-  geom_jitter(size = 4, alpha = 0.6) +
-  facet_wrap(vars(species)) +
-  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +
-  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +
-  theme_minimal(base_size = 12) +
-  theme(
-    legend.position = 'top', 
-    panel.background = element_rect(color = 'black'),
-    panel.grid.minor = element_blank()
-  ) +
-  labs(
-    x = 'Body mass (in g)',
-    y = 'Bill length (in mm)'
-  )
-```
+## Dagster Integration
 
-### Maximizing likelihood
+On the orchestration side, **Dagster** pairs nicely with DuckDB.  Georg Heiler’s article on the local modern data stack emphasises that Dagster manages the execution of data pipelines and integrates tightly with dbt; in this stack, DuckDB acts as the local analytics engine:contentReference[oaicite:13]{index=13}.  The same article points out that the stack scales from a developer’s machine to Kubernetes, demonstrating that you can start small and grow without swapping out tools:contentReference[oaicite:14]{index=14}.  A 2025 guide by Codecentric shows step‑by‑step how to add a `DuckDBResource` to a Dagster project; it highlights that combining Dagster with DuckDB lets you build pipelines where data is stored and queried via DuckDB’s SQL engine within a Dagster workflow:contentReference[oaicite:15]{index=15}.  In practice, this means you can orchestrate ingestion (e.g., reading CSV files) and transformation tasks using pure Python and SQL on your laptop, then schedule or monitor them just like a production pipeline.
 
-```{r}
-#| code-fold: true
-glm.mod <- glm(sex ~ body_mass_g + bill_length_mm + species, family = binomial, data = dat)
+## MotherDuck: Scaling DuckDB to the Cloud
 
-preds <- dat %>% 
-  mutate(
-    prob.fit = glm.mod$fitted.values,
-    prediction = if_else(prob.fit > 0.5, 'male', 'female'),
-    correct = if_else(sex == prediction, 'correct', 'incorrect')
-  )
+Although DuckDB is local, there are cases where you want cloud persistence or collaboration.  **MotherDuck** is a hosted service that brings DuckDB’s in‑process database to a serverless cloud environment.  The KDnuggets blog describes MotherDuck as a *managed DuckDB‑in‑the‑cloud service* that is free and open source:contentReference[oaicite:16]{index=16}, while Atgeir Solutions notes that MotherDuck allows DuckDB to scale seamlessly to the cloud:contentReference[oaicite:17]{index=17}.  MotherDuck’s announcement states that it gives **“99 % of users who do not need complex data infrastructure”** the ability to use DuckDB’s simplicity at scale:contentReference[oaicite:18]{index=18}.  It acts as a hybrid engine: queries start on your local machine and overflow into MotherDuck when more resources are needed.  This makes it easy to collaborate without maintaining Snowflake‑style clusters.
 
+A comparison from Orchestra summarises how Snowflake and MotherDuck cater to different project sizes.  Snowflake offers automatic scaling and separation of storage and compute—features that are critical for large enterprise workloads:contentReference[oaicite:19]{index=19}.  MotherDuck, on the other hand, uses columnar storage, runs almost anywhere (including browsers), integrates easily, and is open source:contentReference[oaicite:20]{index=20}.  The article suggests that Snowflake is better for large, variable workloads, while MotherDuck is ideal for small projects or applications needing local processing:contentReference[oaicite:21]{index=21}.  The cost difference is significant: Snowflake’s pay‑as‑you‑go model can become expensive, whereas MotherDuck (and DuckDB) is far more cost‑effective:contentReference[oaicite:22]{index=22}.
 
-preds %>% 
-  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +
-  geom_jitter(size = 4, alpha = 0.6) +
-  facet_wrap(vars(species)) +
-  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +
-  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +
-  theme_minimal(base_size = 10) +
-  theme(
-    legend.position = 'top', 
-    panel.background = element_rect(color = 'black'),
-    panel.grid.minor = element_blank()
-  ) +
-  labs(
-    x = 'Body mass (in g)',
-    y = 'Bill length (in mm)'
-  )
-```
-:::
+## Cost and Scalability Considerations
 
-#### 4 - Some math stuff
+When deciding between DuckDB and Snowflake, cost and scale are key factors.  DuckDB and MotherDuck are **free or inexpensive**; there are no licensing fees, and the only costs are cloud storage or minimal VM charges.  Snowflake uses a consumption‑based model with separate charges for compute and storage.  SyncComputing notes that DuckDB’s zero cost makes it ideal for small or budget‑constrained projects, while Snowflake’s pricing scales with usage and is more suited to large operations:contentReference[oaicite:23]{index=23}.  The Definite post provides a concrete example: running a small DuckDB warehouse on Google Cloud was **~55 % cheaper** than Snowflake’s smallest warehouse at 12 hours/day usage and the savings grow as warehouses increase:contentReference[oaicite:24]{index=24}.  In their migration, they realised >70 % savings by moving from Snowflake to DuckDB:contentReference[oaicite:25]{index=25}.
 
-$$
-\int_0^1 f(x) \ dx
-$$
+Snowflake still excels when you need to support many concurrent users, massive data volumes or fine‑grained security.  It offers automatic scaling, robust permission management and features like time travel, data sharing and zero‑copy cloning.  But for personal projects, prototypes or small‑scale analytics, these capabilities often go unused, while the costs accumulate.  DuckDB’s simplicity and zero infrastructure make it a better fit for these scenarios.
 
+## Conclusion and Further Reading
 
+For smaller personal projects, **DuckDB** offers a compelling alternative to Snowflake.  It runs locally, performs fast analytical queries, integrates with modern tools like **dbt** and **Dagster**, and can scale to the cloud via **MotherDuck**.  Meanwhile, Snowflake remains an excellent choice for enterprise‑grade workloads where elasticity, concurrency and managed infrastructure justify the cost.
 
+If you’d like to explore further, check out these posts from the community:
 
-## 2 - Columns
+- **Definite**’s detailed account of migrating their warehouse from Snowflake to DuckDB and achieving over 70 % cost savings:contentReference[oaicite:26]{index=26}.  They describe how DuckDB is lightweight, supports multiple file formats and runs locally:contentReference[oaicite:27]{index=27}.
+- **Data Knows All** on why local databases like DuckDB make sense when Snowflake costs are high and data doesn’t change frequently:contentReference[oaicite:28]{index=28}.  They provide a concise list of DuckDB’s benefits—including in‑process architecture, columnar storage and integration with languages:contentReference[oaicite:29]{index=29}.
+- **Codecentric**’s guide to using DuckDB with Dagster:contentReference[oaicite:30]{index=30}, which walks through setting up a Dagster project with DuckDB and demonstrates how to build pipelines using DuckDB assets.
 
-::: {layout="[[1,1]]"}
+By leveraging DuckDB for local analytics and MotherDuck for optional cloud scaling, you can build an efficient, low‑cost data stack tailored to your personal projects without sacrificing the modern tooling you expect.
 
-```{r}
-#| eval: false
-#| echo: true
-geom_density(
-  mapping = NULL,
-  data = NULL,
-  stat = "density",
-  position = "identity",
-  ...,
-  na.rm = FALSE,
-  orientation = NA,
-  show.legend = NA,
-  inherit.aes = TRUE,
-  outline.type = "upper"
-)
-```
-
-```{r}
-#| eval: false
-#| echo: true
-stat_density(
-  mapping = NULL,
-  data = NULL,
-  geom = "area",
-  position = "stack",
-  ...,
-  bw = "nrd0",
-  adjust = 1,
-  kernel = "gaussian",
-  n = 512,
-  trim = FALSE,
-  na.rm = FALSE,
-  orientation = NA,
-  show.legend = NA,
-  inherit.aes = TRUE
-)
-```
-
-:::
-
-## 2 - Margin captions
-
-```{r}
-#| fig-cap: "Bla bla bla. This is a caption in the margin. Super cool isn't it?"
-#| fig-cap-location: margin
-ggplot(data = gapminder::gapminder, mapping = aes(x = lifeExp, fill = continent)) +
-  stat_density(position = "identity", alpha = 0.5)
-```
