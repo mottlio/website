@@ -1,8 +1,8 @@
 ---
 title: 'DuckDB & MotherDuck as a Snowflake alternative for smaller data engineering projects'
 date: '2025-01-05'
-categories: ['123', 'Second Tag']
-description: 'This is a test post. In this post, I try out different functionalities'
+categories: ['DuckDB', 'DBT', 'Dagster']
+description: 'I explore new uses for DuckDB, MotherDuck and their integration with DBT and Dagster.'
 execute: 
   message: false
   warning: false
