@@ -79,20 +79,7 @@ Data Viz.
 :::
 :::
 
-::: {.g-col-12 .g-col-md-4}
-::: {#card-third-color .card .h-100}
-::: {.card-body .d-flex .flex-column}
-<p class="card-text">
 
-GET in touch!
-
-</p>
-
-::: {style="margin-top: auto;"}
-<a href="talks.qmd" class="card-link third-color-link heading-font">CONTACT</a>
-:::
-:::
-:::
 :::
 
 
