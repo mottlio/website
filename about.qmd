@@ -1,5 +1,19 @@
 ---
-title: "About"
+title: "About Me"
 ---
+
+
+Hi, I’m **Michal Mottl**—an economist and data analyst who helps organisations solve complex problems with quantitative evidence. I turn messy data into clear, decision-ready insights.
+
+Over the past decade, I’ve worked across New Zealand, the EU, and the UK in roles spanning market analysis, regulation, and competition policy—most recently as a Senior Data Analyst at New Zealand’s Commerce Commission, and previously as an economist at the European Commission.&#x20;
+
+My toolkit includes **R, Python, SQL, data warehouses, dbt, and BI platforms**, which I use to build robust pipelines, models, and dashboards that leaders can trust. I’ve delivered analysis in **fuel, retail payments, telecommunications, e-commerce, and online platforms**—from shaping theories of harm to monitoring market performance.&#x20;
+
+I’m open to **contracting and consulting**—from rapid diagnostics and one-off studies to ongoing analytics support. If you need rigorous, transparent, and actionable results, let’s talk: 
+
+```{=HTML}
+michal<!--.example-->@mottl.io
+```
+
 
 

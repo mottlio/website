@@ -1,15 +1,12 @@
 {
-  "hash": "a754ce02c0472c0b163d8ffb898e69ac",
+  "hash": "55b806876645f042a563b01187e7ad49",
   "result": {
-    "engine": "knitr",
-    "markdown": "---\ntitle: \"About\"\n---\n\n\nAbout this site\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n",
-    "supporting": [],
-    "filters": [
-      "rmarkdown/pagebreak.lua"
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"About Me\"\n---\n\n\n\n\n\n\n\n\nHi, I’m **Michal Mottl**—an economist and data analyst who helps organisations solve complex problems with quantitative evidence. I turn messy data into clear, decision-ready insights.\n\nOver the past decade, I’ve worked across New Zealand, the EU, and the UK in roles spanning market analysis, regulation, and competition policy—most recently as a Senior Data Analyst at New Zealand’s Commerce Commission, and previously as an economist at the European Commission.&#x20;\n\nMy toolkit includes **R, Python, SQL, data warehouses, dbt, and BI platforms**, which I use to build robust pipelines, models, and dashboards that leaders can trust. I’ve delivered analysis in **fuel, retail payments, telecommunications, e-commerce, and online platforms**—from shaping theories of harm to monitoring market performance.&#x20;\n\nI’m open to **contracting and consulting**—from rapid diagnostics and one-off studies to ongoing analytics support. If you need rigorous, transparent, and actionable results, let’s talk: \n\n\n\n\n\n\n\n```{html}\nmichal<!--.example-->@mottl.io\n```\n\n\n\n\n\n\n\n\n**[michal.mottl@coleurope.eu](mailto:michal.mottl@coleurope.eu)** or LinkedIn **/in/mottl**.&#x20;\n\n",
+    "supporting": [
+      "about_files/figure-html"
     ],
-    "includes": {},
-    "engineDependencies": {},
-    "preserve": {},
-    "postProcess": true
+    "filters": [],
+    "includes": {}
   }
 }
