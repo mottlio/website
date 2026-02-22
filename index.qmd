@@ -23,9 +23,11 @@ I help organisations operating in digital and regulated sectors build **trusted 
 :::
 
 ::: {.g-col-12}
----
+::: {.card}
+::: {.card-body}
 **Background:** European Commission • New Zealand Commerce Commission • UK/EU/NZ market analysis experience
----
+:::
+:::
 :::
 
 ::: {.g-col-12 .g-col-md-4}
