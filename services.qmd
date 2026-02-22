@@ -1,0 +1,63 @@
+---
+title: "Work with me"
+---
+
+I help organisations operating in **digital and regulated markets** make better strategic decisions by building trusted market intelligence systems.
+
+## Who I work with
+
+- Telecom, fintech, payments, and platform businesses
+- Advisory teams supporting regulated industries
+- Public institutions and market oversight teams
+
+## Services
+
+### 1) Market monitoring system design
+
+I design end-to-end monitoring systems that turn fragmented market data into clear, decision-ready intelligence.
+
+Typical outcomes:
+- Repeatable market KPI framework
+- Automated data collection and pipeline setup
+- Leadership-facing dashboards and reporting
+
+### 2) Regulatory analytics and data trust
+
+I help teams produce robust, transparent analysis that can stand up to regulatory and executive scrutiny.
+
+Typical outcomes:
+- Data quality and validation framework
+- Reproducible analytics workflows
+- Evidence packs for strategic/regulatory decisions
+
+### 3) AI-ready data workflow advisory
+
+I help organisations prepare data workflows for practical AI use without sacrificing reliability.
+
+Typical outcomes:
+- Data readiness assessment
+- Prioritised implementation roadmap
+- Pilot use-cases with measurable impact
+
+## Engagement formats
+
+- Focused diagnostic sprint (1-2 weeks)
+- Project-based delivery (4-12 weeks)
+- Ongoing advisory support
+
+## Why me
+
+I combine:
+- economics and market-structure expertise,
+- regulatory experience,
+- and hands-on data engineering/analytics delivery.
+
+I’ve worked across New Zealand, the EU, and the UK, including roles at the New Zealand Commerce Commission and European Commission.
+
+## Contact
+
+If this is relevant to your team, email me at:
+
+```{=HTML}
+michal<!--.example-->@mottl.io
+```

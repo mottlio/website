@@ -10,8 +10,10 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - text: About
-        href: "https://www.linkedin.com/in/mottl/"
+      - href: services.qmd
+        text: Work with me
+      - href: about.qmd
+        text: About
       - posts.qmd
 
 format:
