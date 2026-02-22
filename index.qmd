@@ -1,8 +1,5 @@
 ---
-knitr:
-  opts_chunk: 
-    collapse: true
-execute: 
+execute:
   echo: false
 page-layout: full
 ---

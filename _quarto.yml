@@ -6,6 +6,7 @@ execute:
 
 website:
   title: "Michal Mottl"
+  site-url: "https://mottl.io"
   navbar:
     right:
       - href: index.qmd
