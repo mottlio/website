@@ -16,15 +16,15 @@ page-layout: full
 
 ::: {.g-col-12 .g-col-md-8}
 
-Hi! 👋 I'm an economist and data scientist passionate about using data analysis and visualization to make the complex simple. I've lived and [worked](https://www.linkedin.com/in/mottl/){target="_blank"} in the United Kingdom, European Union and New Zealand 🌏. My main areas of interest are:
+Hi! I'm an economist and data scientist passionate about using data analysis and visualization to make the complex simple. I've lived and [worked](https://www.linkedin.com/in/mottl/){target="_blank"} in the United Kingdom, European Union and New Zealand. My main areas of interest are:
 
--   Data Analysis 🔎🔬
+-   Data Analysis
 
--   Data Visualization 📈 📊
+-   Data Visualization
 
--   Data Engineering 🛠️
+-   Data Engineering
 
--   Machine Learning and AI 🤖
+-   Machine Learning and AI
 
 :::
 
