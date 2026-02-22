@@ -1,8 +1,5 @@
 ---
-knitr:
-  opts_chunk: 
-    collapse: true
-execute: 
+execute:
   echo: false
 page-layout: full
 ---
@@ -68,12 +65,12 @@ About me, my work and experience.
 ::: {.card-body .d-flex .flex-column}
 <p class="card-text">
 
-Data Viz.
+Work with me on market intelligence, regulatory analytics, and AI-ready data systems.
 
 </p>
 
 ::: {style="margin-top: auto;"}
-<a href="packages.qmd" class="card-link second-color-link heading-font">PROJECTS</a>
+<a href="services.qmd" class="card-link second-color-link heading-font">WORK WITH ME</a>
 :::
 :::
 :::
