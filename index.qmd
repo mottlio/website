@@ -5,56 +5,56 @@ page-layout: full
 ---
 
 ::: grid
-::: g-col-12
-:::
 
 ::: {.g-col-12 .g-col-md-4}
-
 ![](images/MM.jpg){.profile-pic style="clip-path: circle();" fig-alt="Michal photo" fig-align="center" width="80%"}
-
 :::
 
 ::: {.g-col-12 .g-col-md-8}
+## Market intelligence and regulatory analytics for complex markets
 
-Hi! I'm an economist and data scientist passionate about using data analysis and visualization to make the complex simple. I've lived and [worked](https://www.linkedin.com/in/mottl/){target="_blank"} in the United Kingdom, European Union and New Zealand. My main areas of interest are:
+I help organisations operating in digital and regulated sectors build **trusted data systems** that turn fragmented information into clear, decision-ready intelligence.
 
--   Data Analysis
+- Market monitoring and KPI system design
+- Regulatory analytics and evidence frameworks
+- AI-ready data workflows with strong data quality controls
 
--   Data Visualization
-
--   Data Engineering
-
--   Machine Learning and AI
-
+[Work with me](services.qmd){.btn .btn-primary}
 :::
 
-::: {.g-col-12 .g-col-md-4}
-::: {#card-second-color .card .h-100}
-::: {.card-body .d-flex .flex-column}
-<p class="card-text">
-
-Posts about data-related topics (mostly). Notes about problems I encountered in my projects and ways I've solved them.
-
-</p>
-
-::: {style="margin-top: auto;"}
-<a href="posts.qmd" class="card-link second-color-link heading-font">BLOG</a>
-:::
-:::
-:::
+::: {.g-col-12}
+---
+**Background:** European Commission • New Zealand Commerce Commission • UK/EU/NZ market analysis experience
+---
 :::
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {#card-first-color .card .h-100}
 ::: {.card-body .d-flex .flex-column}
-<p class="card-text">
+### Services
 
-About me, my work and experience.
+Practical support for regulated and digital markets:
 
-</p>
+- market intelligence systems
+- regulatory analytics
+- AI/data workflow advisory
 
 ::: {style="margin-top: auto;"}
-<a href="about.qmd" class="card-link heading-font">ABOUT</a>
+<a href="services.qmd" class="card-link heading-font">VIEW SERVICES</a>
+:::
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {#card-second-color .card .h-100}
+::: {.card-body .d-flex .flex-column}
+### About
+
+I combine economics, regulation, and data engineering to help leadership teams make better strategic decisions.
+
+::: {style="margin-top: auto;"}
+<a href="about.qmd" class="card-link second-color-link heading-font">ABOUT</a>
 :::
 :::
 :::
@@ -63,22 +63,15 @@ About me, my work and experience.
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card .h-100}
 ::: {.card-body .d-flex .flex-column}
-<p class="card-text">
+### Insights
 
-Work with me on market intelligence, regulatory analytics, and AI-ready data systems.
-
-</p>
+Technical and strategic writing on data systems, analytics, and AI in real-world market contexts.
 
 ::: {style="margin-top: auto;"}
-<a href="services.qmd" class="card-link second-color-link heading-font">WORK WITH ME</a>
+<a href="posts.qmd" class="card-link second-color-link heading-font">BLOG POSTS</a>
 :::
 :::
 :::
 :::
 
-
 :::
-
-
-
-
