@@ -1,0 +1,54 @@
+<button id="lang-toggle" class="lang-toggle" aria-label="Switch language" title="Switch language">🌐 EN</button>
+<script>
+(function () {
+  const KEY = 'mottl_lang';
+  const btn = document.getElementById('lang-toggle');
+
+  function applyNav(lang) {
+    const map = {
+      en: { '/index.html': 'Home', '/': 'Home', '/services.html': 'Work with me', '/about.html': 'About', '/posts.html': 'Blog posts' },
+      pl: { '/index.html': 'Start', '/': 'Start', '/services.html': 'Współpraca', '/about.html': 'O mnie', '/posts.html': 'Blog (EN)' }
+    };
+    document.querySelectorAll('nav a[href], .navbar a[href]').forEach(a => {
+      try {
+        const p = new URL(a.href, window.location.origin).pathname;
+        if (map[lang][p]) a.textContent = map[lang][p];
+      } catch (_) {}
+    });
+  }
+
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.lang-en').forEach(el => el.style.display = (lang === 'en' ? '' : 'none'));
+    document.querySelectorAll('.lang-pl').forEach(el => el.style.display = (lang === 'pl' ? '' : 'none'));
+    applyNav(lang);
+    if (btn) btn.textContent = lang === 'pl' ? '🌐 PL' : '🌐 EN';
+    localStorage.setItem(KEY, lang);
+  }
+
+  async function detectLang() {
+    const saved = localStorage.getItem(KEY);
+    if (saved === 'pl' || saved === 'en') return saved;
+    try {
+      const controller = new AbortController();
+      const t = setTimeout(() => controller.abort(), 1800);
+      const res = await fetch('https://ipapi.co/json/', { signal: controller.signal });
+      clearTimeout(t);
+      if (res.ok) {
+        const data = await res.json();
+        if ((data && data.country_code) === 'PL') return 'pl';
+      }
+    } catch (_) {}
+    return (navigator.language || '').toLowerCase().startsWith('pl') ? 'pl' : 'en';
+  }
+
+  if (btn) {
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.lang === 'pl' ? 'pl' : 'en';
+      setLang(current === 'pl' ? 'en' : 'pl');
+    });
+  }
+
+  detectLang().then(setLang);
+})();
+</script>
