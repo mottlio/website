@@ -20,6 +20,7 @@ Typical outcomes:
 - Repeatable market KPI framework
 - Automated data collection and pipeline setup
 - Leadership-facing dashboards and reporting
+- Multi-source intelligence pipelines (web, newsletters, social, and internal data)
 
 ### 2) Regulatory analytics and data trust
 
