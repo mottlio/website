@@ -2,18 +2,30 @@
 title: "About Me"
 ---
 
-
+::: {.lang-en}
 Hi, I’m **Michal Mottl**—an economist and data analyst who helps organisations solve complex problems with quantitative evidence. I turn messy data into clear, decision-ready insights.
 
-Over the past decade, I’ve worked across New Zealand, the EU, and the UK in roles spanning market analysis, regulation, and competition policy—most recently as a Senior Data Analyst at New Zealand’s Commerce Commission, and previously as an economist at the European Commission.&#x20;
+Over the past decade, I’ve worked across New Zealand, the EU, and the UK in roles spanning market analysis, regulation, and competition policy—most recently as a Senior Data Analyst at New Zealand’s Commerce Commission, and previously as an economist at the European Commission.
 
-My toolkit includes **R, Python, SQL, data warehouses, dbt, and BI platforms**, which I use to build robust pipelines, models, and dashboards that leaders can trust. I’ve delivered analysis in **fuel, retail payments, telecommunications, e-commerce, and online platforms**—from shaping theories of harm to monitoring market performance.&#x20;
+My toolkit includes **R, Python, SQL, data warehouses, dbt, and BI platforms**, which I use to build robust pipelines, models, and dashboards that leaders can trust. I’ve delivered analysis in **fuel, retail payments, telecommunications, e-commerce, and online platforms**—from shaping theories of harm to monitoring market performance.
 
-I’m open to **contracting and consulting**—from rapid diagnostics and one-off studies to ongoing analytics support. If you need rigorous, transparent, and actionable results, let’s talk: 
+I’m open to **contracting and consulting**—from rapid diagnostics and one-off studies to ongoing analytics support. If you need rigorous, transparent, and actionable results, let’s talk:
 
 ```{=HTML}
 michal<!--.example-->@mottl.io
 ```
+:::
 
+::: {.lang-pl}
+Cześć, nazywam się **Michal Mottl** — jestem ekonomistą i analitykiem danych, który pomaga organizacjom rozwiązywać złożone problemy w oparciu o dowody ilościowe. Zamieniam nieuporządkowane dane w jasne wnioski gotowe do podjęcia decyzji.
 
+W ostatniej dekadzie pracowałem w Nowej Zelandii, UE i Wielkiej Brytanii w obszarach analizy rynkowej, regulacji i polityki konkurencji — ostatnio jako Senior Data Analyst w New Zealand Commerce Commission, wcześniej jako ekonomista w Komisji Europejskiej.
 
+Pracuję z **R, Pythonem, SQL, hurtowniami danych, dbt i platformami BI**. Buduję stabilne pipeline’y, modele i dashboardy, którym zespoły decyzyjne mogą zaufać. Realizowałem analizy m.in. dla sektorów: **paliwa, płatności detaliczne, telekomunikacja, e-commerce i platformy online**.
+
+Jestem otwarty na **współpracę kontraktową i consultingową** — od szybkich diagnoz i jednorazowych analiz po stałe wsparcie analityczne. Jeśli potrzebujesz rzetelnych, transparentnych i użytecznych rezultatów, napisz:
+
+```{=HTML}
+michal<!--.example-->@mottl.io
+```
+:::

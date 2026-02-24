@@ -11,6 +11,7 @@ page-layout: full
 :::
 
 ::: {.g-col-12 .g-col-md-8}
+::: {.lang-en}
 ## Market intelligence and regulatory analytics for complex markets
 
 I help organisations operating in digital and regulated sectors build **trusted data systems** that turn fragmented information into clear, decision-ready intelligence.
@@ -22,10 +23,28 @@ I help organisations operating in digital and regulated sectors build **trusted 
 [Work with me](services.qmd){.btn .btn-primary}
 :::
 
+::: {.lang-pl}
+## Wywiad rynkowy i analityka regulacyjna dla złożonych rynków
+
+Pomagam organizacjom działającym na rynkach cyfrowych i regulowanych budować **zaufane systemy danych**, które zamieniają rozproszone informacje w jasne, gotowe do decyzji wnioski.
+
+- Projektowanie systemów monitoringu rynku i KPI
+- Analityka regulacyjna i ramy dowodowe
+- Przygotowanie procesów danych pod praktyczne użycie AI
+
+[Współpraca](services.qmd){.btn .btn-primary}
+:::
+:::
+
 ::: {.g-col-12}
 ::: {.card}
 ::: {.card-body}
+::: {.lang-en}
 **Background:** European Commission • New Zealand Commerce Commission • UK/EU/NZ market analysis experience
+:::
+::: {.lang-pl}
+**Doświadczenie:** Komisja Europejska • New Zealand Commerce Commission • analizy rynkowe w UK/UE/NZ
+:::
 :::
 :::
 :::
@@ -33,6 +52,7 @@ I help organisations operating in digital and regulated sectors build **trusted 
 ::: {.g-col-12 .g-col-md-4}
 ::: {#card-first-color .card .h-100}
 ::: {.card-body .d-flex .flex-column}
+::: {.lang-en}
 ### Services
 
 Practical support for regulated and digital markets:
@@ -45,12 +65,28 @@ Practical support for regulated and digital markets:
 <a href="services.qmd" class="card-link heading-font">VIEW SERVICES</a>
 :::
 :::
+
+::: {.lang-pl}
+### Usługi
+
+Praktyczne wsparcie dla rynków regulowanych i cyfrowych:
+
+- systemy wywiadu rynkowego
+- analityka regulacyjna
+- doradztwo AI/data workflow
+
+::: {style="margin-top: auto;"}
+<a href="services.qmd" class="card-link heading-font">ZOBACZ USŁUGI</a>
+:::
+:::
+:::
 :::
 :::
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {#card-second-color .card .h-100}
 ::: {.card-body .d-flex .flex-column}
+::: {.lang-en}
 ### About
 
 I combine economics, regulation, and data engineering to help leadership teams make better strategic decisions.
@@ -59,18 +95,41 @@ I combine economics, regulation, and data engineering to help leadership teams m
 <a href="about.qmd" class="card-link second-color-link heading-font">ABOUT</a>
 :::
 :::
+
+::: {.lang-pl}
+### O mnie
+
+Łączę ekonomię, regulacje i inżynierię danych, aby pomagać zespołom decyzyjnym podejmować lepsze decyzje strategiczne.
+
+::: {style="margin-top: auto;"}
+<a href="about.qmd" class="card-link second-color-link heading-font">O MNIE</a>
+:::
+:::
+:::
 :::
 :::
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {.card .h-100}
 ::: {.card-body .d-flex .flex-column}
+::: {.lang-en}
 ### Insights
 
 Technical and strategic writing on data systems, analytics, and AI in real-world market contexts.
 
 ::: {style="margin-top: auto;"}
 <a href="posts.qmd" class="card-link second-color-link heading-font">BLOG POSTS</a>
+:::
+:::
+
+::: {.lang-pl}
+### Artykuły
+
+Teksty techniczne i strategiczne o systemach danych, analityce i AI w realnych kontekstach rynkowych.
+
+::: {style="margin-top: auto;"}
+<a href="posts.qmd" class="card-link second-color-link heading-font">BLOG (EN)</a>
+:::
 :::
 :::
 :::

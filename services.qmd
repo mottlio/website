@@ -2,6 +2,7 @@
 title: "Work with me"
 ---
 
+::: {.lang-en}
 I assist organisations operating in **digital and regulated markets** make better strategic decisions by building trusted market intelligence systems.
 
 ## Who I work with
@@ -20,6 +21,7 @@ Typical outcomes:
 - Repeatable market KPI framework
 - Automated data collection and pipeline setup
 - Leadership-facing dashboards and reporting
+- Multi-source intelligence pipelines (web, newsletters, social, and internal data)
 
 ### 2) Regulatory analytics and data trust
 
@@ -61,3 +63,67 @@ If this is relevant to your team, email me at:
 ```{=HTML}
 michal<!--.example-->@mottl.io
 ```
+:::
+
+::: {.lang-pl}
+Wspieram organizacje działające na **rynkach cyfrowych i regulowanych** w podejmowaniu lepszych decyzji strategicznych poprzez budowę zaufanych systemów wywiadu rynkowego.
+
+## Z kim pracuję
+
+- Firmy z obszaru telekom, fintech, płatności i platform cyfrowych
+- Zespoły doradcze wspierające sektory regulowane
+- Instytucje publiczne i zespoły nadzoru rynku
+
+## Usługi
+
+### 1) Projektowanie systemów monitoringu rynku
+
+Projektuję kompleksowe systemy monitoringu, które zamieniają rozproszone dane w jasny, decyzyjny obraz rynku.
+
+Typowe rezultaty:
+- Powtarzalny framework KPI rynkowych
+- Automatyzacja zbierania danych i pipeline’ów
+- Dashboardy i raportowanie dla kadry decyzyjnej
+- Wieloźródłowe pipeline’y wywiadu (web, newslettery, social media, dane wewnętrzne)
+
+### 2) Analityka regulacyjna i jakość danych
+
+Pomagam zespołom tworzyć rzetelne i transparentne analizy, które wytrzymują ocenę regulacyjną i zarządczą.
+
+Typowe rezultaty:
+- Ramy jakości i walidacji danych
+- Powtarzalne workflow analityczne
+- Pakiety dowodowe do decyzji strategicznych/regulacyjnych
+
+### 3) Doradztwo AI-ready data workflow
+
+Pomagam przygotować workflow danych do praktycznego użycia AI bez utraty wiarygodności i kontroli jakości.
+
+Typowe rezultaty:
+- Ocena gotowości danych
+- Priorytetyzowana mapa wdrożenia
+- Pilotaże use-case’ów z mierzalnym efektem
+
+## Formy współpracy
+
+- Szybki sprint diagnostyczny (1-2 tygodnie)
+- Współpraca projektowa (4-12 tygodni)
+- Stałe wsparcie doradcze
+
+## Dlaczego ja
+
+Łączę:
+- ekspertyzę ekonomiczną i rynkową,
+- doświadczenie regulacyjne,
+- praktyczne dowożenie rozwiązań data engineering/analityka.
+
+Pracowałem w Nowej Zelandii, UE i Wielkiej Brytanii, m.in. dla New Zealand Commerce Commission i Komisji Europejskiej.
+
+## Kontakt
+
+Jeśli to brzmi adekwatnie do potrzeb Twojego zespołu, napisz:
+
+```{=HTML}
+michal<!--.example-->@mottl.io
+```
+:::
