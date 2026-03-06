@@ -24,7 +24,7 @@ I help organisations operating in digital and regulated sectors build **trusted 
 :::
 
 ::: {.lang-pl}
-## Wywiad rynkowy i analityka regulacyjna dla złożonych rynków
+## Badanie rynków i analityka regulacyjna dla złożonych rynków
 
 Pomagam organizacjom działającym na rynkach cyfrowych i regulowanych budować **zaufane systemy danych**, które zamieniają rozproszone informacje w jasne, gotowe do decyzji wnioski.
 
