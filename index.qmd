@@ -12,7 +12,7 @@ page-layout: full
 
 ::: {.g-col-12 .g-col-md-8}
 ::: {.lang-en}
-## Market intelligence and regulatory analytics for complex markets
+## Michał Mottl — consulting in data analysis and economic analysis
 
 I help organisations operating in digital and regulated sectors build **trusted data systems** that turn fragmented information into clear, decision-ready intelligence.
 
@@ -24,7 +24,7 @@ I help organisations operating in digital and regulated sectors build **trusted 
 :::
 
 ::: {.lang-pl}
-## Wywiad rynkowy i analityka regulacyjna dla złożonych rynków
+## Michał Mottl - doradztwo z zakresu analizy danych i analiz ekonomicznych
 
 Pomagam organizacjom działającym na rynkach cyfrowych i regulowanych budować **zaufane systemy danych**, które zamieniają rozproszone informacje w jasne, gotowe do decyzji wnioski.
 
