@@ -29,7 +29,7 @@ I help organisations operating in digital and regulated sectors build **trusted 
 Pomagam organizacjom działającym na rynkach cyfrowych i regulowanych budować **zaufane systemy danych**, które zamieniają rozproszone informacje w jasne, gotowe do decyzji wnioski.
 
 - Projektowanie systemów monitoringu rynku i KPI
-- Analityka regulacyjna i ramy dowodowe
+- Analiza ekonomiczna rynku
 - Przygotowanie procesów danych pod praktyczne użycie AI
 
 [Współpraca](services.qmd){.btn .btn-primary}
