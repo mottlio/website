@@ -1,0 +1,173 @@
+---
+title: "Skills in AI Agent Development: From Prompt Fragments to Reusable Capability"
+date: "2026-04-08"
+categories: ["AI Agents", "Skills", "Developer Workflow"]
+description: "How I built my first reusable agent skill, why journal/manual files matter, and why skills may become a universal layer for AI interoperability."
+execute:
+  message: false
+  warning: false
+---
+
+
+While working on a recent AI agent project, I noticed a pattern in my workflow — one I’d used many times before with tools like Claude Code and Codex. It was useful enough that I wanted it in every project, not just this one.
+
+So I asked myself: why repeat it manually each time if I can codify it once and reuse it everywhere?
+
+Until then, I had mostly been a consumer of skills created by other developers. I particularly like the Super Powers skill. I also use Play Rec for web browsing, and I experimented with Gary Tan’s G-Stack skills. In the end, though, I felt G-Stack reflected Gary’s specific workflow more than mine, so I didn’t need all of that functionality. Still, it was a valuable experiment — and I learn best by building.
+
+That’s when I decided to create my first skill.
+
+## The problem I wanted to solve
+
+In larger projects, coding agents often forget where we left off, what was already built, and which paths had already failed.
+
+Super Powers gives me great planning and spec documents at the start. But once implementation begins, reality changes: you hit edge cases, adjust decisions, discover better approaches, and course-correct. A lot of that practical knowledge gets lost unless you actively preserve it.
+
+I wanted a better way to keep this implementation memory alive.
+
+## Journal.md: preserving real implementation context
+
+My first idea was simple: a journal file that the coding agent updates after each meaningful batch of work.
+
+That journal should capture:
+- what was implemented,
+- what challenges appeared,
+- which errors occurred,
+- where we changed direction,
+- and where I corrected or refined the agent’s suggestions.
+
+The goal is straightforward: when we return to the project later, the agent should know what we already tried and why. This kind of context is far more granular than what usually goes into `CLAUDE.md` or `AGENTS.md`.
+
+## Manual.md: a practical operating guide for features
+
+The second gap I noticed was what I now call `manual.md`.
+
+This became especially important when I was using two agents on different parts of the same product: backend and frontend. On the backend, I was building a FastAPI service with multiple endpoints. On the frontend, I was building a Swift mobile app.
+
+I needed documentation that went beyond standard docs:
+- exact endpoint behavior,
+- argument requirements,
+- database schema context,
+- implementation details behind key functions,
+- and integration nuances that matter when related features evolve.
+
+In short, I wanted a working manual — not just API docs, but a developer-facing memory of *how this feature actually works in this codebase*.
+
+## My first custom skill
+
+So I built a skill that extends the Super Powers setup.
+
+In addition to plan/spec files, it adds:
+- a `journal.md` for implementation history,
+- and a `manual.md` for practical feature-level guidance.
+
+Before drafting the skill itself, I did some research on how skills work in general — and how they differ from tools or from just writing better prompts.
+
+In the spirit of learning by doing, I decided to document that journey in this post.
+
+# What are skills in the context of AI agent development?
+
+One practical way to think about skills in agent development is this: a skill is usually a structured Markdown file.
+
+At the top, there’s typically YAML front matter — a metadata block meant for the agent. From this block, the agent should understand:
+
+- what the skill does (description),
+- which version it is,
+- what dependencies are required (tools, packages, runtime assumptions),
+- and under which conditions the skill should be used.
+
+The second part of the file is usually an **overview** — a high-level explanation of the skill’s purpose.
+
+The final part is the **execution section**: step-by-step instructions for how to complete the task effectively, including required tools and action order.
+
+I used this structure in my own `project-documentation` skill:  
+https://github.com/mottlio/project-documentation/blob/main/skills/project-documentation/SKILL.md
+
+Most skills are defined in a single `.md` file. I think about them as modular prompt components that can be loaded into context when the task matches the skill’s description.
+
+But skills can include more than Markdown. They can also bundle executable assets — shell scripts, Python files, and other code in accompanying directories.
+
+That’s also where security risk appears.
+
+Downloading random skills from public repositories (for example ClawHub/Claude Hub ecosystems) can be dangerous, because a skill may include executable logic that exfiltrates sensitive data to external services. This is not theoretical: security researchers have already identified unsafe skills in the wild. As one example, the RNWY report on AI skill files noted that **13.4% of scanned ClawHub skills contained critical security vulnerabilities**.
+
+Skills can also reference tools already available to an agent.
+
+A simple mental model that helped me:
+- a **tool** is a hammer,
+- a **skill** is the procedure for using that hammer in a specific situation.
+
+For example: if you need to work on a plasterboard wall, the skill tells you angle, sequence, and safety checks (like detecting beams or electrical cables) before striking.
+
+## How can you use a skill?
+
+At the time of writing, I’m not aware of many centralized skill registries beyond ClawHub-like ecosystems for open Claude tooling. Many useful skills are simply distributed through GitHub repos with installation instructions.
+
+For example, for my own skill:
+
+```bash
+# Add the marketplace
+claude plugin marketplace add mottlio/project-documentation
+
+# Install the skill
+claude plugin install project-documentation
+```
+
+Once installed, the agent should often infer when to use the skill automatically.  
+You can also trigger it explicitly in your prompt, or define usage rules in files like `AGENTS.md` (or your equivalent project instruction file).
+
+One of the biggest advantages of skills is **on-demand context loading**.  
+You can have many skills available, but only load the ones relevant to the current task. That matters, because context is limited and expensive.
+
+# The promise of reusable skills — the Matrix scenario
+
+Thanks to the standardized structure of skills — and their growing portability across models and agent frameworks — we’re seeing an expanding ecosystem of community-built skills.
+
+In many ways, this feels similar to software package ecosystems (Python, R, npm): you don’t need to reinvent everything from scratch if someone has already solved a similar problem and shared the solution.
+
+In practical terms, that changes day-to-day agent work.  
+When you hit a challenge — integrating with an API, using a specific piece of software, or orchestrating an MCP workflow — you often don’t need to write a long prompt from zero. You can reuse a skill someone else has already formalized.
+
+And when this works well, it feels almost magical: the agent can load the relevant skill and immediately operate with much better domain context.
+
+It reminds me of *The Matrix* scene where Trinity needs to fly a helicopter and the skill is “uploaded” instantly:
+
+[Trinity learns to fly a helicopter](https://www.youtube.com/watch?v=SoAk7zBTrvo)
+
+## Team-level leverage: skill libraries
+
+One particularly interesting direction is team-level skill sharing.  
+Manus AI, for example, describes a “Team Skill Library” model where team members publish their own skills and others can adapt them for their workflows.
+
+That creates compounding benefits:
+- faster onboarding for less experienced teammates,
+- better knowledge transfer,
+- fewer repeated mistakes,
+- and more consistent execution across projects.
+
+In tech environments where priorities shift quickly, that kind of reusable operational memory is a major advantage.
+
+## Could skill files become a universal AI programming layer?
+
+A bigger idea is starting to emerge: skill files as a universal language for programming agent behavior.
+
+Think of what HTML did for the web, or what SQL did for data.  
+Skill files could play a similar role for agent capabilities: structured, portable instructions that encode expertise and execution patterns in a reusable format.
+
+Their main strength is modularity.  
+Like software components, skills package knowledge and workflows into units that can be shared, versioned, and improved over time — but aimed at dynamic agent behavior rather than static application logic.
+
+## Competitive implications and vendor lock-in
+
+Widespread adoption of open skill standards could also reshape competition between major AI vendors.
+
+If the same skill can run across multiple frameworks, switching costs fall.  
+As Plaban Nayak noted in his Medium article, open standards around agent skills can reduce framework silos and make capabilities more portable across platforms.
+
+That would be healthy for the ecosystem: more interoperability, less lock-in, and faster innovation.
+
+## Final thought
+
+As AI becomes embedded in more products and workflows, standardized skill layers may become one of the key accelerators of practical, interoperable AI.
+
+In the meantime, my list of ideas for reusable skills just keeps getting longer.
