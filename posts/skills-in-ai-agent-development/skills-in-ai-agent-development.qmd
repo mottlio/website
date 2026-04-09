@@ -13,7 +13,7 @@ While working on a recent AI agent project, I noticed a pattern in my workflow �
 
 So I asked myself: why repeat it manually each time if I can codify it once and reuse it everywhere?
 
-Until then, I had mostly been a consumer of skills created by other developers. I particularly like the Super Powers skill. I also use Play Rec for web browsing, and I experimented with Gary Tan’s G-Stack skills. In the end, though, I felt G-Stack reflected Gary’s specific workflow more than mine, so I didn’t need all of that functionality. Still, it was a valuable experiment — and I learn best by building.
+Until then, I had mostly been a consumer of skills created by other developers. I particularly like the Super Powers skill. I also use Playwright for web browsing, and I experimented with Gary Tan’s G-Stack skills. In the end, though, I felt G-Stack reflected Gary’s specific workflow more than mine, so I didn’t need all of that functionality. Still, it was a valuable experiment — and I learn best by building.
 
 That’s when I decided to create my first skill.
 
@@ -55,7 +55,7 @@ In short, I wanted a working manual — not just API docs, but a developer-facin
 
 ## My first custom skill
 
-So I built a skill that extends the Super Powers setup.
+So I built a skill that extends the superpowers-skill setup.
 
 In addition to plan/spec files, it adds:
 - a `journal.md` for implementation history,
@@ -69,7 +69,7 @@ In the spirit of learning by doing, I decided to document that journey in this p
 
 One practical way to think about skills in agent development is this: a skill is usually a structured Markdown file.
 
-At the top, there’s typically YAML front matter — a metadata block meant for the agent. From this block, the agent should understand:
+At the top, there’s typically YAML frontmatter — a metadata block meant for the agent. From this block, the agent should understand:
 
 - what the skill does (description),
 - which version it is,
@@ -81,7 +81,7 @@ The second part of the file is usually an **overview** — a high-level explanat
 The final part is the **execution section**: step-by-step instructions for how to complete the task effectively, including required tools and action order.
 
 I used this structure in my own `project-documentation` skill:  
-https://github.com/mottlio/project-documentation/blob/main/skills/project-documentation/SKILL.md
+[My Github repo - SKILL.md](https://github.com/mottlio/project-documentation/blob/main/skills/project-documentation/SKILL.md)
 
 Most skills are defined in a single `.md` file. I think about them as modular prompt components that can be loaded into context when the task matches the skill’s description.
 
@@ -89,7 +89,7 @@ But skills can include more than Markdown. They can also bundle executable asset
 
 That’s also where security risk appears.
 
-Downloading random skills from public repositories (for example ClawHub/Claude Hub ecosystems) can be dangerous, because a skill may include executable logic that exfiltrates sensitive data to external services. This is not theoretical: security researchers have already identified unsafe skills in the wild. As one example, the RNWY report on AI skill files noted that **13.4% of scanned ClawHub skills contained critical security vulnerabilities**.
+Downloading random skills from public repositories (for example ClawHub ecosystems) can be dangerous, because a skill may include executable logic that exfiltrates sensitive data to external services. This is not theoretical: security researchers have already identified unsafe skills in the wild. As one example, the RNWY report on AI skill files noted that **13.4% of scanned ClawHub skills contained critical security vulnerabilities**.
 
 Skills can also reference tools already available to an agent.
 
@@ -101,7 +101,7 @@ For example: if you need to work on a plasterboard wall, the skill tells you ang
 
 ## How can you use a skill?
 
-At the time of writing, I’m not aware of many centralized skill registries beyond ClawHub-like ecosystems for open Claude tooling. Many useful skills are simply distributed through GitHub repos with installation instructions.
+At the time of writing, I’m not aware of many centralized skill registries beyond ClawHub-like ecosystems for OpenClaw tooling. Many useful skills are simply distributed through GitHub repos with installation instructions.
 
 For example, for my own skill:
 
@@ -123,7 +123,7 @@ You can have many skills available, but only load the ones relevant to the curre
 
 Thanks to the standardized structure of skills — and their growing portability across models and agent frameworks — we’re seeing an expanding ecosystem of community-built skills.
 
-In many ways, this feels similar to software package ecosystems (Python, R, npm): you don’t need to reinvent everything from scratch if someone has already solved a similar problem and shared the solution.
+In many ways, this feels similar to software package ecosystems (Python - PyPl, R - CRAN, JavaScript - npm): you don’t need to reinvent everything from scratch if someone has already solved a similar problem and shared the solution.
 
 In practical terms, that changes day-to-day agent work.  
 When you hit a challenge — integrating with an API, using a specific piece of software, or orchestrating an MCP workflow — you often don’t need to write a long prompt from zero. You can reuse a skill someone else has already formalized.
@@ -171,3 +171,17 @@ That would be healthy for the ecosystem: more interoperability, less lock-in, an
 As AI becomes embedded in more products and workflows, standardized skill layers may become one of the key accelerators of practical, interoperable AI.
 
 In the meantime, my list of ideas for reusable skills just keeps getting longer.
+
+## More background reading on skills:
+
+1. [SKILLS.md: The New Primitive for Building AI Agents](https://michielh.medium.com/skills-md-the-new-primitive-for-building-ai-agents-e3d3f024b6c5)
+2. [Agent Skills :Standard for Smarter AI | by Plaban Nayak - Medium](https://medium.com/@nayakpplaban/agent-skills-standard-for-smarter-ai-bde76ea61c13)
+3. [The SKILL.md Pattern: How to Write AI Agent Skills That Actually Work](https://bibek-poudel.medium.com/the-skill-md-pattern-how-to-write-ai-agent-skills-that-actually-work-72a3169dd7ee)
+4. [Agent Skills: The Open Standard for Custom AI Capabilities](https://www.bishoylabib.com/posts/claude-skills-comprehensive-guide)
+5. [Manus AI Embraces Open Standards: Integrating Agent Skills to ...](https://manus.im/blog/manus-skills)
+6. [The Trace to Skill : Automating Agent Intelligence Beyond Human ...](https://atalupadhyay.wordpress.com/2026/03/29/the-trace-to-skill-automating-agent-intelligence-beyond-human-prompting/)
+7. [Use Agent Skills in VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills)
+8. [What Are Agent Skills? Modular AI Agent Frameworks Explained](https://www.datacamp.com/blog/agent-skills)
+9. [What Is an AI Skill File? The Complete Guide | RNWY](https://rnwy.com/learn/what-is-ai-skill-file)
+10. [Skills vs MCP tools for agents: when to use what](https://www.llamaindex.ai/blog/skills-vs-mcp-tools-for-agents-when-to-use-what)
+
