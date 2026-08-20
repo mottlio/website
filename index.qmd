@@ -14,7 +14,7 @@ page-layout: full
 ::: {.lang-en}
 ## Michał Mottl — consulting in data analysis and economic analysis
 
-I help organisations operating in digital and regulated sectors build **trusted data systems** that turn fragmented information into clear, decision-ready intelligence.
+I organize fragmented data into systems people can trust — and into insights they can base decisions on.
 
 - Market monitoring and KPI system design
 - Regulatory analytics and evidence frameworks
