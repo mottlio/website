@@ -26,7 +26,7 @@ I help organisations operating in digital and regulated sectors build **trusted 
 ::: {.lang-pl}
 ## Michał Mottl - doradztwo z zakresu analizy danych i analiz ekonomicznych
 
-Pomagam organizacjom działającym na rynkach cyfrowych i regulowanych budować **zaufane systemy danych**, które zamieniają rozproszone informacje w jasne, gotowe do decyzji wnioski.
+Porządkuję rozproszone dane w systemy, którym można ufać — i w wnioski, na których można oprzeć decyzje.
 
 - Projektowanie systemów monitoringu rynku i KPI
 - Analiza ekonomiczna rynku
