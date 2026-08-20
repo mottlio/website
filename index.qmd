@@ -16,9 +16,9 @@ page-layout: full
 
 I organize fragmented data into systems people can trust — and into insights they can base decisions on.
 
+- AI-ready data workflows with strong data quality controls
 - Market monitoring and KPI system design
 - Regulatory analytics and evidence frameworks
-- AI-ready data workflows with strong data quality controls
 
 [Work with me](services.qmd){.btn .btn-primary}
 :::
@@ -28,9 +28,9 @@ I organize fragmented data into systems people can trust — and into insights t
 
 Porządkuję rozproszone dane w systemy, którym można ufać — i w wnioski, na których można oprzeć decyzje.
 
+- Przygotowanie procesów danych pod praktyczne użycie AI
 - Projektowanie systemów monitoringu rynku i KPI
 - Analiza ekonomiczna rynku
-- Przygotowanie procesów danych pod praktyczne użycie AI
 
 [Współpraca](services.qmd){.btn .btn-primary}
 :::
