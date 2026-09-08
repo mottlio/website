@@ -1,0 +1,27 @@
+---
+title: "How I work"
+---
+
+::: {.lang-en}
+**I start with the question, not the technology.** First we establish what you do not know, what you would like to know, and how much not knowing costs. Tool selection follows from that conversation; it is not the starting point.
+
+**I do not disrupt operational systems.** Analytics cannot slow the company down. I work on copies and replicas, outside the critical path.
+
+**Every number has a reproducible path.** From the result on a dashboard, it is possible to get back to the source document. That is the difference between a report and evidence.
+
+**Documentation and knowledge transfer are part of the delivery.** Code, data models, process descriptions -- everything stays with you and is written so that someone else can take it over. I do not build dependency on myself.
+
+**If the better solution is something you already have, I will say so.** I do not sell licences, I do not receive commissions from software vendors, and I have no interest in making a project bigger than it should be.
+:::
+
+::: {.lang-pl}
+**Zaczynam od pytania, nie od technologii.** Najpierw ustalamy, czego nie wiesz, a chciałbyś wiedzieć, i ile kosztuje brak tej wiedzy. Wybór narzędzi jest konsekwencją tej rozmowy, nie jej punktem wyjścia.
+
+**Nie zakłócam pracy systemów operacyjnych.** Analityka nie może spowalniać działania firmy. Pracuję na kopiach i replikach, poza ścieżką krytyczną.
+
+**Każda liczba ma dającą się odtworzyć drogę.** Od wyniku na dashboardzie da się dojść do dokumentu źródłowego. To jest różnica między raportem a dowodem.
+
+**Dokumentacja i przekazanie wiedzy są częścią dostawy.** Kod, modele danych, opis procesów -- wszystko zostaje u Ciebie i jest napisane tak, żeby przejął to ktoś inny. Nie buduję zależności od siebie.
+
+**Jeśli lepszym rozwiązaniem jest coś, co już masz, powiem to.** Nie sprzedaję licencji, nie mam prowizji od producentów oprogramowania i nie mam interesu w tym, żeby projekt był większy, niż powinien.
+:::
