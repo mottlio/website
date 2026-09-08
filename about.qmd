@@ -3,29 +3,33 @@ title: "About Me"
 ---
 
 ::: {.lang-en}
-Hi, I’m **Michal Mottl**—an economist and data analyst who helps organisations solve complex problems with quantitative evidence. I turn messy data into clear, decision-ready insights.
+I work on how markets and companies function -- and on how to turn scattered data into analyses that can withstand criticism.
 
-Over the past decade, I’ve worked across New Zealand, the EU, and the UK in roles spanning market analysis, regulation, and competition policy—most recently as a Senior Data Analyst at New Zealand’s Commerce Commission, and previously as an economist at the European Commission.
+For twenty years I have worked on the side of institutions whose job was to resolve disputes about what is really happening in a market: at the European Commission (DG COMP, DG CONNECT) and at New Zealand's competition authority. Analyses produced in those conditions do not end with conclusions. They are challenged point by point by the other side, which has its own economists and its own data. That taught me that the value of analysis lies not in the chart, but in whether the path to every number can be reproduced.
 
-My toolkit includes **R, Python, SQL, data warehouses, dbt, and BI platforms**, which I use to build robust pipelines, models, and dashboards that leaders can trust. I’ve delivered analysis in **fuel, retail payments, telecommunications, e-commerce, and online platforms**—from shaping theories of harm to monitoring market performance.
+Over time, that economic work was joined by the engineering side: building data warehouses, automating workflows, quality control, and the reporting layer. Not because I wanted to change professions, but because without this, analysis is one-off. Today, most of my work consists of combining those two things.
 
-I’m open to **contracting and consulting**—from rapid diagnostics and one-off studies to ongoing analytics support. If you need rigorous, transparent, and actionable results, let’s talk:
+I run a one-person business in Warsaw. I work in Polish and English, in Poland and remotely.
 
-```{=HTML}
-michal<!--.example-->@mottl.io
-```
+**Tools**
+
+Python, SQL, dbt, Dagster, DuckDB, Snowflake, SQL Server, Power BI, Tableau, Streamlit, R, and many others...
+
+The choice depends on what you already have and who will use it. The tool is the last decision in a project, not the first.
 :::
 
 ::: {.lang-pl}
-Cześć, nazywam się **Michal Mottl** — jestem ekonomistą i analitykiem danych, który pomaga organizacjom rozwiązywać złożone problemy w oparciu o dowody ilościowe. Zamieniam nieuporządkowane dane w jasne wnioski gotowe do podjęcia decyzji.
+Zajmuję się tym, jak działają rynki i firmy -- i tym, jak zamienić rozproszone dane w analizy, które wytrzymają krytykę.
 
-W ostatniej dekadzie pracowałem w Nowej Zelandii, UE i Wielkiej Brytanii w obszarach analizy rynkowej, regulacji i polityki konkurencji — ostatnio jako Senior Data Analyst w New Zealand Commerce Commission, wcześniej jako ekonomista w Komisji Europejskiej.
+Przez dwadzieścia lat pracowałem po stronie instytucji, których zadaniem było rozstrzyganie sporów o to, co się na rynku naprawdę dzieje: w Komisji Europejskiej (DG COMP, DG CONNECT) i w nowozelandzkim urzędzie ochrony konkurencji. Analizy powstające w takich warunkach nie kończą się na wnioskach. Są kwestionowane punkt po punkcie przez drugą stronę, która ma własnych ekonomistów i własne dane. Nauczyło mnie to, że wartość analizy leży nie w wykresie, tylko w tym, czy da się odtworzyć drogę do każdej liczby.
 
-Pracuję z **R, Pythonem, SQL, hurtowniami danych, dbt i platformami BI**. Buduję stabilne pipeline’y, modele i dashboardy, którym zespoły decyzyjne mogą zaufać. Realizowałem analizy m.in. dla sektorów: **paliwa, płatności detaliczne, telekomunikacja, e-commerce i platformy online**.
+Do tej ekonomicznej części doszła z czasem strona inżynierska: budowanie hurtowni danych, automatyzacja przepływów, kontrola jakości, warstwa raportowa. Nie dlatego, że chciałem zmienić zawód, tylko dlatego, że bez tego analiza jest jednorazowa. Dziś większość mojej pracy polega na łączeniu obu tych rzeczy.
 
-Jestem otwarty na **współpracę kontraktową i consultingową** — od szybkich diagnoz i jednorazowych analiz po stałe wsparcie analityczne. Jeśli potrzebujesz rzetelnych, transparentnych i użytecznych rezultatów, napisz:
+Prowadzę jednoosobową działalność w Warszawie. Pracuję po polsku i po angielsku, w Polsce i zdalnie.
 
-```{=HTML}
-michal<!--.example-->@mottl.io
-```
+**Narzędzia**
+
+Python, SQL, dbt, Dagster, DuckDB, Snowflake, SQL Server, Power BI, Tableau, Streamlit, R i wiele innych...
+
+Dobór zależy od tego, co już masz i kto ma z tego korzystać. Narzędzie jest ostatnią decyzją w projekcie, nie pierwszą.
 :::

@@ -12,40 +12,13 @@ page-layout: full
 
 ::: {.g-col-12 .g-col-md-8}
 ::: {.lang-en}
-## Michał Mottl — consulting in data analysis and economic analysis
+## From scattered data to answers you can base decisions on.
 
-I organize fragmented data into systems people can trust — and into insights they can base decisions on.
-
-- Market monitoring and KPI system design
-- Regulatory analytics and evidence frameworks
-- AI-ready data workflows with strong data quality controls
-
-[Work with me](services.qmd){.btn .btn-primary}
 :::
 
 ::: {.lang-pl}
-## Michał Mottl - doradztwo z zakresu analizy danych i analiz ekonomicznych
+## Od rozproszonych danych do odpowiedzi, na których można oprzeć decyzję.
 
-Porządkuję rozproszone dane w systemy, którym można ufać — i w wnioski, na których można oprzeć decyzje.
-
-- Projektowanie systemów monitoringu rynku i KPI
-- Analiza ekonomiczna rynku
-- Przygotowanie procesów danych pod praktyczne użycie AI
-
-[Współpraca](services.qmd){.btn .btn-primary}
-:::
-:::
-
-::: {.g-col-12}
-::: {.card}
-::: {.card-body}
-::: {.lang-en}
-**Background:** European Commission • New Zealand Commerce Commission • UK/EU/NZ market analysis experience
-:::
-::: {.lang-pl}
-**Doświadczenie:** Komisja Europejska • New Zealand Commerce Commission • analizy rynkowe w UK/UE/NZ
-:::
-:::
 :::
 :::
 
@@ -53,31 +26,15 @@ Porządkuję rozproszone dane w systemy, którym można ufać — i w wnioski, n
 ::: {#card-first-color .card .h-100}
 ::: {.card-body .d-flex .flex-column}
 ::: {.lang-en}
-### Services
+### Analysis
 
-Practical support for regulated and digital markets:
-
-- market intelligence systems
-- regulatory analytics
-- AI/data workflow advisory
-
-::: {style="margin-top: auto;"}
-<a href="services.qmd" class="card-link heading-font">VIEW SERVICES</a>
-:::
+Understanding how the market works and where the result is really created inside the organisation. Cost structure, profitability, prices, competition, and the effects of decisions.
 :::
 
 ::: {.lang-pl}
-### Usługi
+### Analiza
 
-Praktyczne wsparcie dla rynków regulowanych i cyfrowych:
-
-- systemy wywiadu rynkowego
-- analityka regulacyjna
-- doradztwo AI/data workflow
-
-::: {style="margin-top: auto;"}
-<a href="services.qmd" class="card-link heading-font">ZOBACZ USŁUGI</a>
-:::
+Rozumienie tego, jak działa rynek i gdzie w organizacji naprawdę powstaje wynik. Struktura kosztów, rentowność, ceny, konkurencja, efekty decyzji.
 :::
 :::
 :::
@@ -87,23 +44,15 @@ Praktyczne wsparcie dla rynków regulowanych i cyfrowych:
 ::: {#card-second-color .card .h-100}
 ::: {.card-body .d-flex .flex-column}
 ::: {.lang-en}
-### About
+### Data Systems
 
-I combine economics, regulation, and data engineering to help leadership teams make better strategic decisions.
-
-::: {style="margin-top: auto;"}
-<a href="about.qmd" class="card-link second-color-link heading-font">ABOUT</a>
-:::
+Infrastructure that makes analysis repeatable, not one-off. Data warehouses, workflow automation, quality control, and full reproducibility of results.
 :::
 
 ::: {.lang-pl}
-### O mnie
+### Systemy danych
 
-Łączę ekonomię, regulacje i inżynierię danych, aby pomagać zespołom decyzyjnym podejmować lepsze decyzje strategiczne.
-
-::: {style="margin-top: auto;"}
-<a href="about.qmd" class="card-link second-color-link heading-font">O MNIE</a>
-:::
+Infrastruktura, dzięki której analiza jest powtarzalna, a nie jednorazowa. Hurtownie danych, automatyzacja przepływów, kontrola jakości, pełna odtwarzalność wyniku.
 :::
 :::
 :::
@@ -113,25 +62,75 @@ I combine economics, regulation, and data engineering to help leadership teams m
 ::: {.card .h-100}
 ::: {.card-body .d-flex .flex-column}
 ::: {.lang-en}
-### Insights
+### Reporting and Decisions
 
-Technical and strategic writing on data systems, analytics, and AI in real-world market contexts.
-
-::: {style="margin-top: auto;"}
-<a href="posts.qmd" class="card-link second-color-link heading-font">BLOG POSTS</a>
-:::
+The layer actually used by people who make decisions. Reports, dashboards, and documentation that allow someone else to understand where a number came from.
 :::
 
 ::: {.lang-pl}
-### Artykuły
+### Raportowanie i decyzje
 
-Teksty techniczne i strategiczne o systemach danych, analityce i AI w realnych kontekstach rynkowych.
+Warstwa, z której faktycznie korzystają ludzie podejmujący decyzje. Raporty, dashboardy, dokumentacja pozwalająca komuś innemu zrozumieć, skąd wzięła się liczba.
+:::
+:::
+:::
+:::
 
-::: {style="margin-top: auto;"}
-<a href="posts.qmd" class="card-link second-color-link heading-font">BLOG (EN)</a>
+::: {.g-col-12}
+::: {.lang-en}
+One of these elements is rarely enough on its own. Usually, the problem is that they are disconnected: analysts do not trust the data, data does not reach decisions, and decisions do not feed back into analysis.
+
+## When I Can Help
+
+Usually when one of these sentences comes up:
+
+- "We have a lot of data and only a limited picture of the whole."
+- "We need to justify this decision based on solid data analysis."
+- "Every department brings different numbers in response to the same question."
+- "This report is prepared manually and no one except one person knows how."
+- "We do not know which customer, product, or channel actually pays for itself."
+
+## How I Work
+
+**I start with the question, not the technology.** First we establish what you do not know, what you would like to know, and how much not knowing costs. Tool selection follows from that conversation; it is not the starting point.
+
+**I do not disrupt operational systems.** Analytics cannot slow the company down. I work on copies and replicas, outside the critical path.
+
+**Every number has a reproducible path.** From the result on a dashboard, it is possible to get back to the source document. That is the difference between a report and evidence.
+
+**Documentation and knowledge transfer are part of the delivery.** Code, data models, process descriptions -- everything stays with you and is written so that someone else can take it over. I do not build dependency on myself.
+
+**If the better solution is something you already have, I will say so.** I do not sell licences, I do not receive commissions from software vendors, and I have no interest in making a project bigger than it should be.
+
+[Work with me](services.qmd){.btn .btn-primary}
 :::
-:::
-:::
+
+::: {.lang-pl}
+Rzadko potrzebny jest tylko jeden z tych elementów. Zwykle problem polega na tym, że są rozłączone: analitycy nie ufają danym, dane nie trafiają do decyzji, a decyzje nie wracają do analiz.
+
+## Kiedy mogę pomóc?
+
+Zwykle wtedy, gdy pada któreś z tych zdań:
+
+- "Mamy mnóstwo danych i ograniczony obraz całości."
+- "Musimy uzasadnić tę decyzję w oparciu o solidną analizę danych."
+- "Każdy dział przynosi inne liczby w odpowiedzi na to samo pytanie."
+- "Ten raport powstaje ręcznie i nikt poza jedną osobą nie wie, jak."
+- "Nie wiemy, który klient, produkt albo kanał naprawdę na siebie zarabia."
+
+## Jak pracuję
+
+**Zaczynam od pytania, nie od technologii.** Najpierw ustalamy, czego nie wiesz, a chciałbyś wiedzieć, i ile kosztuje brak tej wiedzy. Wybór narzędzi jest konsekwencją tej rozmowy, nie jej punktem wyjścia.
+
+**Nie zakłócam pracy systemów operacyjnych.** Analityka nie może spowalniać działania firmy. Pracuję na kopiach i replikach, poza ścieżką krytyczną.
+
+**Każda liczba ma dającą się odtworzyć drogę.** Od wyniku na dashboardzie da się dojść do dokumentu źródłowego. To jest różnica między raportem a dowodem.
+
+**Dokumentacja i przekazanie wiedzy są częścią dostawy.** Kod, modele danych, opis procesów -- wszystko zostaje u Ciebie i jest napisane tak, żeby przejął to ktoś inny. Nie buduję zależności od siebie.
+
+**Jeśli lepszym rozwiązaniem jest coś, co już masz, powiem to.** Nie sprzedaję licencji, nie mam prowizji od producentów oprogramowania i nie mam interesu w tym, żeby projekt był większy, niż powinien.
+
+[Współpraca](services.qmd){.btn .btn-primary}
 :::
 :::
 
