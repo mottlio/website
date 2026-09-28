@@ -27,8 +27,11 @@ $footer-bg: $panel;
 /*-- scss:rules --*/
 
 h1, h2, h3 { letter-spacing: -.015em; }
+.navbar-brand-container { display: flex; align-items: center; }
+.navbar-brand-container > .navbar-brand:not(.navbar-brand-logo) { order: 1; }
+.navbar-brand-container > .navbar-brand-logo { order: 2; margin-left: .5rem; }
 .navbar-brand .navbar-title { font-weight: 800; letter-spacing: -.01em; color: #FFFFFF; }
-.navbar-brand .navbar-logo { width: 32px; height: 32px; object-fit: cover; border-radius: 50%; margin-right: .5rem; }
+.navbar-brand .navbar-logo { width: 32px; height: 32px; object-fit: cover; border-radius: 50%; }
 
 :focus-visible { outline: 2px solid $brass; outline-offset: 3px; }
 
