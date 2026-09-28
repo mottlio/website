@@ -130,7 +130,7 @@ toc: false
 <div class="contact" id="contact">
   <div class="wrap">
     <div class="lang-en"><h2>Tell me what you'd like to know</h2><p>Polish or English, in Warsaw or remotely.</p></div>
-    <div class="lang-pl"><h2>Napisz, czego chcesz się dowiedzieć</h2><p>Po polsku lub po angielsku, w Warszawie lub zdalnie.</p></div>
+    <div class="lang-pl"><h2>Porozmawiajmy!</h2></div>
     <a class="btn-home btn-brass js-mail" href="services.html">michal<!--.example-->@mottl.io</a>
   </div>
 </div>
