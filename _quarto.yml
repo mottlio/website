@@ -19,8 +19,7 @@ website:
 
 format:
   html:
-    theme: yeti
-    css: styles.css
+    theme: [default, theme.scss]
     toc: true
     include-after-body:
       - _includes/lang-toggle.html

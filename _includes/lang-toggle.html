@@ -1,18 +1,24 @@
-<button id="lang-toggle" class="lang-toggle" aria-label="Switch language" title="Switch language">🌐 EN</button>
+<button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language / Zmień język"><span data-lang="en">EN</span><span data-lang="pl">PL</span></button>
 <script>
 (function () {
   const KEY = 'mottl_lang';
   const btn = document.getElementById('lang-toggle');
+
+  // Move the switch into the navbar: before the mobile menu toggler, shown last on desktop via CSS order.
+  const container = document.querySelector('.navbar .navbar-container');
+  if (btn && container) container.insertBefore(btn, container.querySelector('.navbar-toggler'));
 
   function applyNav(lang) {
     const map = {
       en: { '/index.html': 'Home', '/': 'Home', '/services.html': 'Work with me', '/about.html': 'About', '/posts.html': 'Blog posts' },
       pl: { '/index.html': 'Start', '/': 'Start', '/services.html': 'Współpraca', '/about.html': 'O mnie', '/posts.html': 'Blog (EN)' }
     };
-    document.querySelectorAll('nav a[href], .navbar a[href]').forEach(a => {
+    // Only nav items; the brand link also points to /index.html and must keep the site name.
+    document.querySelectorAll('.navbar .nav-link[href]').forEach(a => {
       try {
         const p = new URL(a.href, window.location.origin).pathname;
-        if (map[lang][p]) a.textContent = map[lang][p];
+        const label = a.querySelector('.menu-text') || a;
+        if (map[lang][p]) label.textContent = map[lang][p];
       } catch (_) {}
     });
   }
@@ -22,12 +28,13 @@
     document.querySelectorAll('.lang-en').forEach(el => el.style.display = (lang === 'en' ? '' : 'none'));
     document.querySelectorAll('.lang-pl').forEach(el => el.style.display = (lang === 'pl' ? '' : 'none'));
     applyNav(lang);
-    if (btn) btn.textContent = lang === 'pl' ? '🌐 PL' : '🌐 EN';
-    localStorage.setItem(KEY, lang);
+    if (btn) btn.querySelectorAll('span').forEach(s => s.classList.toggle('active', s.dataset.lang === lang));
+    try { localStorage.setItem(KEY, lang); } catch (_) {}
   }
 
   async function detectLang() {
-    const saved = localStorage.getItem(KEY);
+    let saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (_) {}
     if (saved === 'pl' || saved === 'en') return saved;
     try {
       const controller = new AbortController();

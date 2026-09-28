@@ -1,137 +1,148 @@
 ---
-execute:
-  echo: false
-page-layout: full
+page-layout: custom
+toc: false
 ---
 
-::: grid
+```{=html}
+<div class="home">
 
-::: {.g-col-12 .g-col-md-4}
-![](images/MM.jpg){.profile-pic style="clip-path: circle();" fig-alt="Michal photo" fig-align="center" width="80%"}
-:::
+<div class="top">
+  <div class="wrap hero">
+    <div>
+      <div class="lang-en">
+        <h1>From scattered data to answers you can base decisions on.</h1>
+        <p class="lede">Analysis, data systems and reporting usually live in separate departments. I connect them, so decisions rest on numbers everyone can trace and trust.</p>
+        <a class="btn-home btn-brass" href="#contact">Get in touch</a><a class="btn-home btn-line" href="#how">How I work</a>
+      </div>
+      <div class="lang-pl">
+        <h1>Od rozproszonych danych do odpowiedzi, na których można oprzeć decyzję.</h1>
+        <p class="lede">Analiza, systemy danych i raportowanie zwykle funkcjonują w osobnych działach. Łączę je, żeby decyzje opierały się na liczbach, które każdy może prześledzić i którym może zaufać.</p>
+        <a class="btn-home btn-brass" href="#contact">Napisz do mnie</a><a class="btn-home btn-line" href="#how">Jak pracuję</a>
+      </div>
+    </div>
 
-::: {.g-col-12 .g-col-md-8}
-::: {.lang-en}
-## From scattered data to answers you can base decisions on.
+    <svg class="loop" viewBox="0 0 400 380" role="img" aria-labelledby="loop-title">
+      <title id="loop-title">Analysis feeds data systems, data systems feed decisions, and decisions feed back into analysis.</title>
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#D29B2B"/>
+        </marker>
+      </defs>
+      <g transform="translate(0,-10)">
+        <path class="ring" marker-end="url(#arrow)" d="M 250 70 A 140 140 0 0 1 338 222"/>
+        <path class="ring" marker-end="url(#arrow)" d="M 280 318 A 140 140 0 0 1 120 318"/>
+        <path class="ring" marker-end="url(#arrow)" d="M 62 222 A 140 140 0 0 1 126 81"/>
+        <g class="node"><rect x="140" y="42" width="120" height="40" rx="4"/>
+          <text x="200" y="67" class="lang-en">Analysis</text><text x="200" y="67" class="lang-pl">Analiza</text></g>
+        <g class="node"><rect x="253" y="250" width="140" height="40" rx="4"/>
+          <text x="323" y="275" class="lang-en">Data systems</text><text x="323" y="275" class="lang-pl">Systemy danych</text></g>
+        <g class="node"><rect x="12" y="250" width="130" height="40" rx="4"/>
+          <text x="77" y="275" class="lang-en">Decisions</text><text x="77" y="275" class="lang-pl">Decyzje</text></g>
+        <text class="centre lang-en" x="200" y="196">One loop,</text>
+        <text class="centre lang-en" x="200" y="216">not three projects</text>
+        <text class="centre lang-pl" x="200" y="196">Jedna pętla,</text>
+        <text class="centre lang-pl" x="200" y="216">nie trzy projekty</text>
+      </g>
+    </svg>
+  </div>
+</div>
 
-:::
+<div class="creds">
+  <div class="wrap lang-en">
+    <p><strong>20 years</strong> of market and competition analysis</p>
+    <p><strong>European Commission</strong>, DG COMP and DG CONNECT</p>
+    <p><strong>New Zealand</strong> competition authority</p>
+  </div>
+  <div class="wrap lang-pl">
+    <p><strong>20 lat</strong> analizy rynków i konkurencji</p>
+    <p><strong>Komisja Europejska</strong>, DG COMP i DG CONNECT</p>
+    <p><strong>Nowa Zelandia</strong>, urząd ochrony konkurencji</p>
+  </div>
+</div>
 
-::: {.lang-pl}
-## Od rozproszonych danych do odpowiedzi, na których można oprzeć decyzję.
+<section>
+  <div class="wrap lang-en">
+    <h2>Three parts of one job</h2>
+    <p class="intro">One of these elements is rarely enough on its own. Usually, the problem is that they are disconnected: analysts do not trust the data, data does not reach decisions, and decisions do not feed back into analysis.</p>
+    <div class="parts">
+      <div><h3>Analysis</h3><p>Understanding how the market works and where the result is really created inside the organisation. Cost structure, profitability, prices, competition, and the effects of decisions.</p></div>
+      <div><h3>Data systems</h3><p>Infrastructure that makes analysis repeatable, not one-off. Data warehouses, workflow automation, quality control, and full reproducibility of results.</p></div>
+      <div><h3>Reporting and decisions</h3><p>The layer actually used by people who make decisions. Reports, dashboards, and documentation that allow someone else to understand where a number came from.</p></div>
+    </div>
+  </div>
+  <div class="wrap lang-pl">
+    <h2>Trzy elementy, jedna całość</h2>
+    <p class="intro">Rzadko potrzebny jest tylko jeden z tych elementów. Zwykle problem polega na tym, że są rozłączone: analitycy nie ufają danym, dane nie trafiają do decyzji, a decyzje nie wracają do analiz.</p>
+    <div class="parts">
+      <div><h3>Analiza</h3><p>Rozumienie tego, jak działa rynek i gdzie w organizacji naprawdę powstaje wynik. Struktura kosztów, rentowność, ceny, konkurencja, efekty decyzji.</p></div>
+      <div><h3>Systemy danych</h3><p>Infrastruktura, dzięki której analiza jest powtarzalna, a nie jednorazowa. Hurtownie danych, automatyzacja przepływów, kontrola jakości, pełna odtwarzalność wyniku.</p></div>
+      <div><h3>Raportowanie i decyzje</h3><p>Warstwa, z której faktycznie korzystają ludzie podejmujący decyzje. Raporty, dashboardy, dokumentacja pozwalająca komuś innemu zrozumieć, skąd wzięła się liczba.</p></div>
+    </div>
+  </div>
+</section>
 
-:::
-:::
+<section class="signals">
+  <div class="wrap grid-2 lang-en">
+    <div><h2>When I can help</h2><p class="intro">Usually when one of these sentences comes up.</p></div>
+    <ul>
+      <li>“We have a lot of data and only a limited picture of the whole.”</li>
+      <li>“We need to justify this decision based on solid data analysis.”</li>
+      <li>“Every department brings different numbers in response to the same question.”</li>
+      <li>“This report is prepared manually and no one except one person knows how.”</li>
+      <li>“We do not know which customer, product, or channel actually pays for itself.”</li>
+    </ul>
+  </div>
+  <div class="wrap grid-2 lang-pl">
+    <div><h2>Kiedy mogę pomóc?</h2><p class="intro">Zwykle wtedy, gdy pada któreś z tych zdań.</p></div>
+    <ul>
+      <li>„Mamy mnóstwo danych i ograniczony obraz całości.”</li>
+      <li>„Musimy uzasadnić tę decyzję w oparciu o solidną analizę danych.”</li>
+      <li>„Każdy dział przynosi inne liczby w odpowiedzi na to samo pytanie.”</li>
+      <li>„Ten raport powstaje ręcznie i nikt poza jedną osobą nie wie, jak.”</li>
+      <li>„Nie wiemy, który klient, produkt albo kanał naprawdę na siebie zarabia.”</li>
+    </ul>
+  </div>
+</section>
 
-::: {.g-col-12 .g-col-md-4}
-::: {#card-first-color .card .h-100}
-::: {.card-body .d-flex .flex-column}
-::: {.lang-en}
-### Analysis
+<section id="how">
+  <div class="wrap lang-en">
+    <h2>How I work</h2>
+    <div class="principles">
+      <div><h3>I start with the question, not the technology.</h3><p>First we establish what you do not know, what you would like to know, and how much not knowing costs. Tool selection follows from that conversation; it is not the starting point.</p></div>
+      <div><h3>I do not disrupt operational systems.</h3><p>Analytics cannot slow the company down. I work on copies and replicas, outside the critical path.</p></div>
+      <div><h3>Every number has a reproducible path.</h3><p>From the result on a dashboard, it is possible to get back to the source document. That is the difference between a report and evidence.</p></div>
+      <div><h3>Documentation and knowledge transfer are part of the delivery.</h3><p>Code, data models, process descriptions: everything stays with you and is written so that someone else can take it over. I do not build dependency on myself.</p></div>
+      <div><h3>If the better solution is something you already have, I will say so.</h3><p>I do not sell licences, I do not receive commissions from software vendors, and I have no interest in making a project bigger than it should be.</p></div>
+    </div>
+  </div>
+  <div class="wrap lang-pl">
+    <h2>Jak pracuję</h2>
+    <div class="principles">
+      <div><h3>Zaczynam od pytania, nie od technologii.</h3><p>Najpierw ustalamy, czego nie wiesz, a chciałbyś wiedzieć, i ile kosztuje brak tej wiedzy. Wybór narzędzi jest konsekwencją tej rozmowy, nie jej punktem wyjścia.</p></div>
+      <div><h3>Nie zakłócam pracy systemów operacyjnych.</h3><p>Analityka nie może spowalniać działania firmy. Pracuję na kopiach i replikach, poza ścieżką krytyczną.</p></div>
+      <div><h3>Każda liczba ma dającą się odtworzyć drogę.</h3><p>Od wyniku na dashboardzie da się dojść do dokumentu źródłowego. To jest różnica między raportem a dowodem.</p></div>
+      <div><h3>Dokumentacja i przekazanie wiedzy są częścią dostawy.</h3><p>Kod, modele danych, opis procesów: wszystko zostaje u Ciebie i jest napisane tak, żeby przejął to ktoś inny. Nie buduję zależności od siebie.</p></div>
+      <div><h3>Jeśli lepszym rozwiązaniem jest coś, co już masz, powiem to.</h3><p>Nie sprzedaję licencji, nie mam prowizji od producentów oprogramowania i nie mam interesu w tym, żeby projekt był większy, niż powinien.</p></div>
+    </div>
+  </div>
+</section>
 
-Understanding how the market works and where the result is really created inside the organisation. Cost structure, profitability, prices, competition, and the effects of decisions.
-:::
+<div class="contact" id="contact">
+  <div class="wrap">
+    <div class="lang-en"><h2>Tell me what you'd like to know</h2><p>Polish or English, in Warsaw or remotely.</p></div>
+    <div class="lang-pl"><h2>Napisz, czego chcesz się dowiedzieć</h2><p>Po polsku lub po angielsku, w Warszawie lub zdalnie.</p></div>
+    <a class="btn-home btn-brass js-mail" href="services.html">michal<!--.example-->@mottl.io</a>
+  </div>
+</div>
 
-::: {.lang-pl}
-### Analiza
+</div>
 
-Rozumienie tego, jak działa rynek i gdzie w organizacji naprawdę powstaje wynik. Struktura kosztów, rentowność, ceny, konkurencja, efekty decyzji.
-:::
-:::
-:::
-:::
-
-::: {.g-col-12 .g-col-md-4}
-::: {#card-second-color .card .h-100}
-::: {.card-body .d-flex .flex-column}
-::: {.lang-en}
-### Data Systems
-
-Infrastructure that makes analysis repeatable, not one-off. Data warehouses, workflow automation, quality control, and full reproducibility of results.
-:::
-
-::: {.lang-pl}
-### Systemy danych
-
-Infrastruktura, dzięki której analiza jest powtarzalna, a nie jednorazowa. Hurtownie danych, automatyzacja przepływów, kontrola jakości, pełna odtwarzalność wyniku.
-:::
-:::
-:::
-:::
-
-::: {.g-col-12 .g-col-md-4}
-::: {.card .h-100}
-::: {.card-body .d-flex .flex-column}
-::: {.lang-en}
-### Reporting and Decisions
-
-The layer actually used by people who make decisions. Reports, dashboards, and documentation that allow someone else to understand where a number came from.
-:::
-
-::: {.lang-pl}
-### Raportowanie i decyzje
-
-Warstwa, z której faktycznie korzystają ludzie podejmujący decyzje. Raporty, dashboardy, dokumentacja pozwalająca komuś innemu zrozumieć, skąd wzięła się liczba.
-:::
-:::
-:::
-:::
-
-::: {.g-col-12}
-::: {.lang-en}
-One of these elements is rarely enough on its own. Usually, the problem is that they are disconnected: analysts do not trust the data, data does not reach decisions, and decisions do not feed back into analysis.
-
-## When I Can Help
-
-Usually when one of these sentences comes up:
-
-- "We have a lot of data and only a limited picture of the whole."
-- "We need to justify this decision based on solid data analysis."
-- "Every department brings different numbers in response to the same question."
-- "This report is prepared manually and no one except one person knows how."
-- "We do not know which customer, product, or channel actually pays for itself."
-
-## How I Work
-
-**I start with the question, not the technology.** First we establish what you do not know, what you would like to know, and how much not knowing costs. Tool selection follows from that conversation; it is not the starting point.
-
-**I do not disrupt operational systems.** Analytics cannot slow the company down. I work on copies and replicas, outside the critical path.
-
-**Every number has a reproducible path.** From the result on a dashboard, it is possible to get back to the source document. That is the difference between a report and evidence.
-
-**Documentation and knowledge transfer are part of the delivery.** Code, data models, process descriptions -- everything stays with you and is written so that someone else can take it over. I do not build dependency on myself.
-
-**If the better solution is something you already have, I will say so.** I do not sell licences, I do not receive commissions from software vendors, and I have no interest in making a project bigger than it should be.
-
-[Work with me](services.qmd){.btn .btn-primary}
-:::
-
-::: {.lang-pl}
-Rzadko potrzebny jest tylko jeden z tych elementów. Zwykle problem polega na tym, że są rozłączone: analitycy nie ufają danym, dane nie trafiają do decyzji, a decyzje nie wracają do analiz.
-
-## Kiedy mogę pomóc?
-
-Zwykle wtedy, gdy pada któreś z tych zdań:
-
-- "Mamy mnóstwo danych i ograniczony obraz całości."
-- "Musimy uzasadnić tę decyzję w oparciu o solidną analizę danych."
-- "Każdy dział przynosi inne liczby w odpowiedzi na to samo pytanie."
-- "Ten raport powstaje ręcznie i nikt poza jedną osobą nie wie, jak."
-- "Nie wiemy, który klient, produkt albo kanał naprawdę na siebie zarabia."
-
-## Jak pracuję
-
-**Zaczynam od pytania, nie od technologii.** Najpierw ustalamy, czego nie wiesz, a chciałbyś wiedzieć, i ile kosztuje brak tej wiedzy. Wybór narzędzi jest konsekwencją tej rozmowy, nie jej punktem wyjścia.
-
-**Nie zakłócam pracy systemów operacyjnych.** Analityka nie może spowalniać działania firmy. Pracuję na kopiach i replikach, poza ścieżką krytyczną.
-
-**Każda liczba ma dającą się odtworzyć drogę.** Od wyniku na dashboardzie da się dojść do dokumentu źródłowego. To jest różnica między raportem a dowodem.
-
-**Dokumentacja i przekazanie wiedzy są częścią dostawy.** Kod, modele danych, opis procesów -- wszystko zostaje u Ciebie i jest napisane tak, żeby przejął to ktoś inny. Nie buduję zależności od siebie.
-
-**Jeśli lepszym rozwiązaniem jest coś, co już masz, powiem to.** Nie sprzedaję licencji, nie mam prowizji od producentów oprogramowania i nie mam interesu w tym, żeby projekt był większy, niż powinien.
-
-[Współpraca](services.qmd){.btn .btn-primary}
-:::
-:::
-
-:::
+<script>
+  // Build the mailto link at runtime so the address isn't in the HTML as plain text.
+  document.querySelectorAll('.js-mail').forEach(function (a) {
+    var addr = 'michal' + '@' + 'mottl.io';
+    a.href = 'mailto:' + addr;
+    a.textContent = addr;
+  });
+</script>
+```
