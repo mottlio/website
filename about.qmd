@@ -17,6 +17,10 @@ I start with conversations with management and the people who will use the tool.
 - create dashboards as well as web and mobile applications, together with servers, security, and user permission management,
 - implement language models and AI agents that use company data, along with tools to evaluate their accuracy and operating costs.
 
+Python, SQL, dbt, Dagster, DuckDB, Snowflake, SQL Server, Power BI, Tableau, Streamlit, R, and many others...
+
+The choice depends on what you already have and who will use it. The tool is the last decision in a project, not the first.
+
 [LinkedIn](https://www.linkedin.com/in/mottl/)
 :::
 
@@ -34,6 +38,8 @@ Pracę zaczynam od rozmów z zarządem i z osobami, które będą korzystać z n
 - przygotowuję procesy przekształcania danych i automatycznej kontroli ich jakości,
 - tworzę dashboardy oraz aplikacje internetowe i mobilne, razem z serwerami, zabezpieczeniami i zarządzaniem uprawnieniami użytkowników,
 - wdrażam modele językowe i agentów AI, którzy korzystają z danych firmy, oraz narzędzia do oceny poprawności i kosztów ich działania.
+
+Dobór zależy od tego, co już masz i kto ma z tego korzystać. Narzędzie jest ostatnią decyzją w projekcie, nie pierwszą.
 
 [LinkedIn](https://www.linkedin.com/in/mottl/)
 :::
