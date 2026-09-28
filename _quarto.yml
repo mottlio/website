@@ -6,10 +6,10 @@ execute:
 
 website:
   title: "Michal Mottl"
-  logo: images/MM.jpg
-  logo-alt: "Michal Mottl"
   site-url: "https://mottl.io"
   navbar:
+    logo: images/MM.jpg
+    logo-alt: "Michal Mottl"
     right:
       - href: index.qmd
         text: Home
@@ -25,5 +25,4 @@ format:
     toc: true
     include-after-body:
       - _includes/lang-toggle.html
-
 
