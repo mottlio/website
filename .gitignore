@@ -11,3 +11,4 @@
 
 /_site/
 *creds.json
+**/*.quarto_ipynb

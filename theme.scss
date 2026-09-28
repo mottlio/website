@@ -1,0 +1,125 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+$navy:    #172B4D;
+$navy-2:  #22385E;
+$panel:   #EEF2F6;
+$ink:     #1A2233;
+$muted:   #56627A;
+$line:    #D5DCE5;
+$brass:   #D29B2B;
+$on-navy: #B9C5D8;
+
+$font-family-sans-serif: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+$body-color: $ink;
+$body-bg: #FFFFFF;
+$primary: $navy;
+$link-color: #1F4E8C;
+$headings-font-weight: 700;
+$border-radius: 4px;
+
+$navbar-bg: $navy;
+$navbar-fg: $on-navy;
+$navbar-hl: #FFFFFF;
+$footer-bg: $panel;
+
+/*-- scss:rules --*/
+
+h1, h2, h3 { letter-spacing: -.015em; }
+.navbar-brand .navbar-title { font-weight: 800; letter-spacing: -.01em; color: #FFFFFF; }
+
+:focus-visible { outline: 2px solid $brass; outline-offset: 3px; }
+
+/* Language switch, moved into the navbar by _includes/lang-toggle.html */
+.lang-toggle {
+  display: inline-flex; order: 850; margin-left: 0; margin-right: .5rem; padding: 0;
+  border: 1px solid $navy-2; border-radius: 4px; overflow: hidden;
+  background: transparent; font: 600 .8rem/1 $font-family-sans-serif; cursor: pointer;
+  span { padding: 6px 9px; color: $on-navy; }
+  span.active { background: #FFFFFF; color: $navy; }
+  &:hover span:not(.active) { color: #FFFFFF; }
+}
+@media (min-width: 992px) {
+  .lang-toggle { order: 950; margin-left: 1rem; margin-right: 0; }
+}
+
+/* ---------- Homepage (index.qmd) ---------- */
+
+#quarto-content .home { padding-top: 0; }
+
+.home {
+  .wrap { max-width: 1200px; margin: 0 auto; padding-left: 40px; padding-right: 40px; }
+  h1, h2, h3 { color: inherit; margin-top: 0; border: 0; padding: 0; }
+  p { margin: 0; }
+
+  .btn-home {
+    display: inline-block; padding: 14px 22px; border-radius: 4px;
+    font-weight: 700; text-decoration: none; line-height: 1.2;
+  }
+  .btn-brass { background: $brass; color: $navy;
+    &:hover { background: lighten($brass, 10%); color: $navy; } }
+  .btn-line { color: #FFFFFF; border: 1px solid $on-navy; margin-left: 10px;
+    &:hover { border-color: #FFFFFF; color: #FFFFFF; } }
+
+  .top { background: $navy; color: #FFFFFF; }
+  .hero {
+    display: grid; grid-template-columns: 1fr 400px; gap: 56px; align-items: center;
+    padding-top: 64px; padding-bottom: 88px;
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 4.2vw, 3.4rem); line-height: 1.06; letter-spacing: -.03em;
+    font-weight: 800; margin: 0 0 26px; max-width: 20ch;
+  }
+  .lede { color: $on-navy; font-size: 1.2rem; line-height: 1.6; max-width: 42ch; margin-bottom: 34px; }
+
+  .loop { width: 100%; height: auto; display: block;
+    .ring { fill: none; stroke: $brass; stroke-width: 2.5; }
+    .node rect { fill: $navy-2; stroke: $on-navy; stroke-width: 1; }
+    .node text { fill: #FFFFFF; font: 700 15px $font-family-sans-serif; text-anchor: middle; }
+    .centre { fill: $on-navy; font: 500 13.5px $font-family-sans-serif; text-anchor: middle; }
+  }
+
+  .creds { background: $panel; border-bottom: 1px solid $line; }
+  .creds .wrap { display: flex; gap: 14px 48px; flex-wrap: wrap; padding-top: 22px; padding-bottom: 22px; }
+  .creds p { font-size: .95rem; color: $muted; }
+  .creds strong { color: $ink; }
+
+  section { padding: 88px 0; }
+  h2 { font-size: 2rem; line-height: 1.15; font-weight: 800; letter-spacing: -.02em; margin-bottom: 14px; }
+  .intro { color: $muted; font-size: 1.12rem; line-height: 1.6; max-width: 60ch; margin-bottom: 48px; }
+
+  .parts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .parts > div { border-top: 3px solid $navy; padding-top: 18px; }
+  .parts h3, .principles h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+  .parts p, .principles p { color: $muted; line-height: 1.6; }
+
+  .signals { background: $panel; }
+  .signals .grid-2 { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; }
+  .signals .intro { margin-bottom: 0; }
+  .signals ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .signals li { background: #FFFFFF; border-left: 3px solid $brass; padding: 16px 20px; font-size: 1.08rem; font-weight: 500; }
+
+  .principles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 64px; }
+  .principles > div { padding: 22px 0; border-bottom: 1px solid $line; }
+  .principles h3 { font-size: 1.06rem; margin-bottom: 4px; }
+  .principles p { max-width: 50ch; }
+
+  .contact { background: $navy; color: #FFFFFF; }
+  .contact .wrap { display: flex; justify-content: space-between; align-items: center; gap: 24px 40px; flex-wrap: wrap; padding-top: 64px; padding-bottom: 64px; }
+  .contact h2 { margin-bottom: 6px; }
+  .contact p { color: $on-navy; }
+
+  @media (max-width: 960px) {
+    .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 40px; padding-bottom: 64px; }
+    .loop { max-width: 400px; }
+    .parts, .signals .grid-2 { grid-template-columns: 1fr; gap: 28px; }
+    .principles { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .wrap { padding-left: 16px; padding-right: 16px; }
+    section { padding: 56px 0; }
+    .btn-line { margin: 12px 0 0; }
+    .creds .wrap { flex-direction: column; }
+  }
+}
