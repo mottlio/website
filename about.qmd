@@ -3,15 +3,19 @@ title: "About Me"
 ---
 
 ::: {.lang-en}
-I work on how markets and companies function -- and on how to turn scattered data into analyses that can withstand criticism.
+## About me
 
-For twenty years I have worked on the side of institutions whose job was to resolve disputes about what is really happening in a market: at the European Commission (DG COMP, DG CONNECT) and at New Zealand's competition authority. Analyses produced in those conditions do not end with conclusions. They are challenged point by point by the other side, which has its own economists and its own data. That taught me that the value of analysis lies not in the chart, but in whether the path to every number can be reproduced.
+I am an economist and data engineer. For many years, I worked on the analysis of markets and businesses, including at the European Commission (Directorate-General for Competition) and New Zealand's competition authority (Commerce Commission). I later moved into analytics and data engineering. Today I design and build systems for companies that help them make decisions based on data.
 
-Over time, that economic work was joined by the engineering side: building data warehouses, automating workflows, quality control, and the reporting layer. Not because I wanted to change professions, but because without this, analysis is one-off. Today, most of my work consists of combining those two things.
+I start with conversations with management and the people who will use the tool. I want to understand what problem it should solve and how we will know that it is doing its job well. Only then do I choose the technical solution.
 
-I run a one-person business in Warsaw. I work in Polish and English, in Poland and remotely.
+**What I do:**
 
-**Tools**
+- integrate data from different systems (ERP, sales, pricing, supplier data), including through APIs,
+- build data warehouses where information from many sources is brought together,
+- prepare data transformation processes and automated quality checks,
+- create dashboards as well as web and mobile applications, together with servers, security, and user permission management,
+- implement language models and AI agents that use company data, along with tools to evaluate their accuracy and operating costs.
 
 Python, SQL, dbt, Dagster, DuckDB, Snowflake, SQL Server, Power BI, Tableau, Streamlit, R, and many others...
 
@@ -21,17 +25,19 @@ The choice depends on what you already have and who will use it. The tool is the
 :::
 
 ::: {.lang-pl}
-Zajmuję się tym, jak działają rynki i firmy -- i tym, jak zamienić rozproszone dane w analizy, które wytrzymają krytykę.
+## O mnie
 
-Przez dwadzieścia lat pracowałem po stronie instytucji, których zadaniem było rozstrzyganie sporów o to, co się na rynku naprawdę dzieje: w Komisji Europejskiej (DG COMP, DG CONNECT) i w nowozelandzkim urzędzie ochrony konkurencji. Analizy powstające w takich warunkach nie kończą się na wnioskach. Są kwestionowane punkt po punkcie przez drugą stronę, która ma własnych ekonomistów i własne dane. Nauczyło mnie to, że wartość analizy leży nie w wykresie, tylko w tym, czy da się odtworzyć drogę do każdej liczby.
+Jestem ekonomistą i inżynierem danych. Przez wiele lat zajmowałem się analizą rynków i przedsiębiorstw, m.in. w Komisji Europejskiej (Dyrekcja Generalna ds. Konkurencji) oraz w nowozelandzkim organie ochrony konkurencji (Commerce Commission). Później przeszedłem do analityki i inżynierii danych. Dziś projektuję i buduję dla firm systemy, które pomagają podejmować decyzje na podstawie danych.
 
-Do tej ekonomicznej części doszła z czasem strona inżynierska: budowanie hurtowni danych, automatyzacja przepływów, kontrola jakości, warstwa raportowa. Nie dlatego, że chciałem zmienić zawód, tylko dlatego, że bez tego analiza jest jednorazowa. Dziś większość mojej pracy polega na łączeniu obu tych rzeczy.
+Pracę zaczynam od rozmów z zarządem i z osobami, które będą korzystać z narzędzia. Chcę zrozumieć, jaki problem ma ono rozwiązać i po czym poznamy, że dobrze spełnia swoje zadanie. Dopiero wtedy dobieram rozwiązanie techniczne.
 
-Prowadzę jednoosobową działalność w Warszawie. Pracuję po polsku i po angielsku, w Polsce i zdalnie.
+**Czym się zajmuję:**
 
-**Narzędzia**
-
-Python, SQL, dbt, Dagster, DuckDB, Snowflake, SQL Server, Power BI, Tableau, Streamlit, R i wiele innych...
+- integruję dane z różnych systemów (ERP, sprzedaż, cenniki, dane od dostawców), m.in. przez API,
+- buduję hurtownie danych, w których informacje z wielu źródeł trafiają w jedno miejsce,
+- przygotowuję procesy przekształcania danych i automatycznej kontroli ich jakości,
+- tworzę dashboardy oraz aplikacje internetowe i mobilne, razem z serwerami, zabezpieczeniami i zarządzaniem uprawnieniami użytkowników,
+- wdrażam modele językowe i agentów AI, którzy korzystają z danych firmy, oraz narzędzia do oceny poprawności i kosztów ich działania.
 
 Dobór zależy od tego, co już masz i kto ma z tego korzystać. Narzędzie jest ostatnią decyzją w projekcie, nie pierwszą.
 
