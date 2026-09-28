@@ -49,14 +49,16 @@ toc: false
 
 <div class="creds">
   <div class="wrap lang-en">
-    <p><strong>20 years</strong> of market and competition analysis</p>
-    <p><strong>European Commission</strong>, DG COMP and DG CONNECT</p>
-    <p><strong>New Zealand</strong> competition authority</p>
+    <p><strong>Economic analysis</strong></p>
+    <p><strong>Business analysis</strong></p>
+    <p><strong>Data engineering</strong></p>
+    <p><strong>AI</strong></p>
   </div>
   <div class="wrap lang-pl">
-    <p><strong>20 lat</strong> analizy rynków i konkurencji</p>
-    <p><strong>Komisja Europejska</strong>, DG COMP i DG CONNECT</p>
-    <p><strong>Nowa Zelandia</strong>, urząd ochrony konkurencji</p>
+    <p><strong>Analiza ekonomiczna</strong></p>
+    <p><strong>Analiza biznesowa</strong></p>
+    <p><strong>Inżynieria danych</strong></p>
+    <p><strong>AI</strong></p>
   </div>
 </div>
 
