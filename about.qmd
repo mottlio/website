@@ -16,6 +16,8 @@ I run a one-person business in Warsaw. I work in Polish and English, in Poland a
 Python, SQL, dbt, Dagster, DuckDB, Snowflake, SQL Server, Power BI, Tableau, Streamlit, R, and many others...
 
 The choice depends on what you already have and who will use it. The tool is the last decision in a project, not the first.
+
+[LinkedIn](https://www.linkedin.com/in/mottl/)
 :::
 
 ::: {.lang-pl}
@@ -32,4 +34,6 @@ Prowadzę jednoosobową działalność w Warszawie. Pracuję po polsku i po angi
 Python, SQL, dbt, Dagster, DuckDB, Snowflake, SQL Server, Power BI, Tableau, Streamlit, R i wiele innych...
 
 Dobór zależy od tego, co już masz i kto ma z tego korzystać. Narzędzie jest ostatnią decyzją w projekcie, nie pierwszą.
+
+[LinkedIn](https://www.linkedin.com/in/mottl/)
 :::
