@@ -21,7 +21,7 @@ Python, SQL, dbt, Dagster, DuckDB, Snowflake, SQL Server, Power BI, Tableau, Str
 
 The choice depends on what you already have and who will use it. The tool is the last decision in a project, not the first.
 
-[LinkedIn](https://www.linkedin.com/in/mottl/)
+[LinkedIn](https://www.linkedin.com/in/mottl/) · [GitHub](https://github.com/mottlio)
 :::
 
 ::: {.lang-pl}
@@ -41,5 +41,5 @@ Pracę zaczynam od rozmów z zarządem i z osobami, które będą korzystać z n
 
 Dobór zależy od tego, co już masz i kto ma z tego korzystać. Narzędzie jest ostatnią decyzją w projekcie, nie pierwszą.
 
-[LinkedIn](https://www.linkedin.com/in/mottl/)
+[LinkedIn](https://www.linkedin.com/in/mottl/) · [GitHub](https://github.com/mottlio)
 :::
