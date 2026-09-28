@@ -40,8 +40,6 @@ toc: false
           <text x="77" y="275" class="lang-en">Decisions</text><text x="77" y="275" class="lang-pl">Decyzje</text></g>
         <text class="centre lang-en" x="200" y="196">One loop,</text>
         <text class="centre lang-en" x="200" y="216">not three projects</text>
-        <text class="centre lang-pl" x="200" y="196">Jedna pętla,</text>
-        <text class="centre lang-pl" x="200" y="216">nie trzy projekty</text>
       </g>
     </svg>
   </div>
