@@ -7,7 +7,6 @@ title: "Work with me"
 
 - Leadership teams that need a real picture of costs, margins, and processes
 - Organisations with data scattered across systems, spreadsheets, and departments
-- Companies preparing analysis for an external audience: an investor, auditor, regulator, or court
 - Analytics teams that need engineering support to stop assembling data manually
 
 I have worked with companies of a few dozen people as well as institutions operating at European scale. The method is the same; the scale and pace change.
@@ -24,7 +23,6 @@ michal<!--.example-->@mottl.io
 
 - Zespoły zarządcze potrzebujące realnego obrazu kosztów, marż i procesów
 - Organizacje z danymi rozproszonymi między systemami, arkuszami i działami
-- Firmy przygotowujące analizy dla odbiorcy zewnętrznego: inwestora, audytora, regulatora, sądu
 - Zespoły analityczne, które potrzebują wsparcia inżynieryjnego, żeby przestać składać dane ręcznie
 
 Pracowałem zarówno z firmami kilkudziesięcioosobowymi, jak i w instytucjach działających w skali europejskiej. Metoda jest ta sama, zmienia się skala i tempo.
