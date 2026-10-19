@@ -5,7 +5,7 @@ title: "About Me"
 ::: {.lang-en}
 ## About me
 
-I am an economist and data engineer. For many years, I worked on the analysis of markets and businesses, including at the European Commission (Directorate-General for Competition) and New Zealand's competition authority (Commerce Commission). I later moved into analytics and data engineering. Today I design and build systems for companies that help them make decisions based on data.
+I am an economist and data engineer. For many years, I worked on the analysis of markets and businesses at private consulting companies and public regulatory authorities. I later moved into analytics and data engineering. Today I design and build systems for companies that help them make decisions based on data.
 
 I start with conversations with management and the people who will use the tool. I want to understand what problem it should solve and how we will know that it is doing its job well. Only then do I choose the technical solution.
 
